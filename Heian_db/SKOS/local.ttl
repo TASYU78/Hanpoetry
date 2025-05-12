@@ -1,0 +1,285 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix hp:   <http://example.org/HanpoetryOWL#> .
+@prefix hpc:  <http://example.org/HanpoetryConcept#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+##################################################################
+# CollectionConcept（诗集概念）
+##################################################################
+
+# 日本诗纪 - 平安诗集子类
+<http://example.org/HanpoetryConcept#CollectionConcept/HeianCollection/Nihonshiki> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#CollectionConcept/HeianPoetryCollection> ;
+    skos:prefLabel "日本诗纪"@zh ;
+    skos:prefLabel "Nihonshiki (Record of Japanese Poetry)"@en ;
+    skos:prefLabel "日本詩紀"@ja ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:definition "日本最早的汉诗总集之一，收录大量王朝时期文人的作品。"@zh ;
+    skos:definition "One of the earliest anthologies of Chinese poetry in Japan, compiling Heian period works."@en ;
+    skos:definition "日本における最初の漢詩総集の一つで、平安初期の文人の詩作を多く収める。"@ja .
+
+##################################################################
+# PersonConcept（人物概念）
+##################################################################
+
+# 菅原道真
+<http://example.org/HanpoetryConcept#PersonConcept/HeianPoet/SugawaraMichizane> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#PersonConcept/HeianPoet> ;
+    skos:prefLabel "菅原道真"@zh ;
+    skos:prefLabel "Sugawara no Michizane"@en ;
+    skos:prefLabel "菅原道真"@ja ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:definition "平安时代著名文人、政治家、诗人，被誉为“学问之神”与汉诗名家。"@zh ;
+    skos:definition "A prominent Heian-era scholar, politician, and poet, venerated as the god of learning in Japan."@en ;
+    skos:definition "平安時代の漢詩人・学者・政治家で、後に天満宮に祀られる学問の神。"@ja .
+
+# 市河宽斋
+<http://example.org/HanpoetryConcept#PersonConcept/HeianPoet/IchikawaKansai> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#PersonConcept/HeianPoet> ;
+    skos:prefLabel "市河宽斋"@zh ;
+    skos:prefLabel "Ichikawa Kansai"@en ;
+    skos:prefLabel "市河寛斎"@ja ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:definition "江户末期儒学者与诗人，致力于汉诗教育与校订工作。"@zh ;
+    skos:definition "A late Edo-period Confucian scholar and poet known for teaching and editing Chinese poetry."@en ;
+    skos:definition "江戸末期の儒学者・漢詩人で、詩の教育と校訂に尽力した人物。"@ja .
+
+
+
+##################################################################
+# PoemTitleConcept（诗题概念）
+##################################################################
+
+#月夜见梅花
+<http://example.org/HanpoetryConcept#PoemTitleConcept/yueyejianmeihua> a skos:Concept ;
+    skos:prefLabel "月夜见梅花"@zh ;
+    skos:prefLabel "Seeing Plum Blossoms on a Moonlit Night"@en ;
+    skos:prefLabel "月夜に梅花を見る"@ja ;
+    skos:broader <http://example.org/HanpoetryConcept#PoemTitleConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> .
+
+#秋夜
+<http://example.org/HanpoetryConcept#PoemTitleConcept/qiuye> a skos:Concept ;
+    skos:prefLabel "秋夜"@zh ;
+    skos:prefLabel "Autumn Night"@en ;
+    skos:prefLabel "秋の夜"@ja ;
+    skos:broader <http://example.org/HanpoetryConcept#PoemTitleConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> .
+
+
+######################################################################
+#KnowledgeConcept（知识概念）
+#####################################################################
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Weather> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "气象"@zh ;
+    skos:prefLabel "Weather"@en ;
+    skos:prefLabel "気象"@ja ;
+    rdfs:comment "表现自然界中风、雨、雪、云等气候现象的概念。"@zh ;
+    rdfs:comment "Concepts representing climatic phenomena like wind, rain, snow, and clouds."@en ;
+    rdfs:comment "風・雨・雪・雲などの自然現象を表す概念。"@ja .
+
+##################################################################
+# 月（天体）
+##################################################################
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject/Moon> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "月亮"@zh ;
+    skos:prefLabel "Moon"@en ;
+    skos:prefLabel "月"@ja ;
+    rdfs:comment "出现在诗中象征思念、孤独或超脱的自然意象。"@zh ;
+    rdfs:comment "A recurring image in poetry symbolizing cycles, longing, solitude, or transcendence."@en ;
+    rdfs:comment "詩において、郷愁・孤独・超脱などを象徴する自然意象。"@ja .
+
+##################################################################
+# 晴雪（气象现象）
+##################################################################
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Weather/SnowSunshine> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Weather> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "晴雪"@zh ;
+    skos:prefLabel "Sunny Snow"@en ;
+    skos:prefLabel "晴れた雪"@ja ;
+    rdfs:comment "雪后放晴所呈现的洁白光辉，是诗中常见的气象意象。"@zh ;
+    rdfs:comment "A poetic meteorological image describing bright snow under clear skies."@en ;
+    rdfs:comment "晴天の雪景色を描いた詩的意象。"@ja .
+
+##################################################################
+# 梅花（植物）
+##################################################################
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Flora/PlumBlossom> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Flora> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "梅花"@zh ;
+    skos:prefLabel "Plum Blossom"@en ;
+    skos:prefLabel "梅の花"@ja ;
+    rdfs:comment "象征高洁、孤芳、逆境绽放，是中国古典诗歌中的常见植物意象。"@zh ;
+    rdfs:comment "Symbolizing purity and resilience, plum blossoms are a common poetic image."@en ;
+    rdfs:comment "純粋さや逆境に咲く力を象徴する詩的な植物意象。"@ja .
+
+##################################################################
+# 星（天体）
+##################################################################
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject/Star> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "星"@zh ;
+    skos:prefLabel "Star"@en ;
+    skos:prefLabel "星"@ja ;
+    rdfs:comment "常象征永恒、希望与遥不可及的诗歌意象。"@zh ;
+    rdfs:comment "A symbol of eternity, hope, and distance in poetic imagery."@en ;
+    rdfs:comment "詩の中で永遠や憧れを象徴する天体。"@ja .
+
+##################################################################
+# 金镜（器物意象，月的比喻）
+##################################################################
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/HumanScene/Object/GoldenMirror> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/HumanScene/Object> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "金镜"@zh ;
+    skos:prefLabel "Golden Mirror"@en ;
+    skos:prefLabel "金の鏡"@ja ;
+    rdfs:comment "常用于比喻圆月光亮清澈的形象。"@zh ;
+    rdfs:comment "A metaphor referring to the bright, round full moon."@en ;
+    rdfs:comment "満月の輝きに例えられる比喩表現。"@ja .
+
+##################################################################
+# 玉房（建筑意象）
+##################################################################
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/HumanScene/Architecture/JadeChamber> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/HumanScene/Architecture> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "玉房"@zh ;
+    skos:prefLabel "Jade Chamber"@en ;
+    skos:prefLabel "玉の房"@ja ;
+    rdfs:comment "华丽或神话化的建筑意象，象征月宫、仙境或闺房。"@zh ;
+    rdfs:comment "A luxurious or mythic room, often symbolizing the moon palace or secluded elegance."@en ;
+    rdfs:comment "月の宮殿や幻想的な建物を象徴する。"@ja .
+
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Admiration> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "赞美"@zh ;
+    skos:prefLabel "Admiration"@en ;
+    skos:prefLabel "讃美"@ja ;
+    rdfs:comment "表现对自然风光或壮丽景物的由衷赞美。"@zh ;
+    rdfs:comment "An emotional tone of deep praise for majestic or natural beauty."@en ;
+    rdfs:comment "壮麗な景色に対する深い称賛の感情。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Loneliness> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "孤独"@zh ;
+    skos:prefLabel "Loneliness"@en ;
+    skos:prefLabel "孤独"@ja ;
+    rdfs:comment "表达孤身一人、与世隔绝的情绪。"@zh ;
+    rdfs:comment "Emotion of being alone and isolated."@en ;
+    rdfs:comment "孤独であること、隔絶された心情を表す。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Frustration> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "失意"@zh ;
+    skos:prefLabel "Frustration"@en ;
+    skos:prefLabel "失意"@ja ;
+    rdfs:comment "怀才不遇、命运不济等情绪状态。"@zh ;
+    rdfs:comment "Emotion of being thwarted or unrecognized."@en ;
+    rdfs:comment "才能が認められないなどのやるせない感情。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Worry> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "忧"@zh ;
+    skos:prefLabel "Worry"@en ;
+    skos:prefLabel "憂い"@ja ;
+    rdfs:comment "古典诗歌中常出现的情绪，反映对现实或命运的焦虑感。"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ColorConcept> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "颜色概念"@zh ;
+    skos:prefLabel "Color Concept"@en ;
+    skos:prefLabel "色の概念"@ja ;
+    rdfs:comment "诗歌中作为意象或象征出现的颜色类抽象概念。"@zh ;
+    rdfs:comment "A conceptual class representing colors as symbolic or descriptive imagery in poetry."@en ;
+    rdfs:comment "詩において象徴的・描写的な意象として用いられる色の概念。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ColorConcept/Yellow> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ColorConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "黄"@zh ;
+    skos:prefLabel "Yellow"@en ;
+    skos:prefLabel "黄色"@ja ;
+    rdfs:comment "代表秋、落叶、成熟、悲伤等诗意象。"@zh ;
+    rdfs:comment "Symbolizes autumn, maturity, decay, or melancholy in poetry."@en ;
+    rdfs:comment "秋や哀愁などを象徴する詩的色彩。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Weather/Frost> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Weather> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "霜"@zh ;
+    skos:prefLabel "Frost"@en ;
+    skos:prefLabel "霜"@ja ;
+    rdfs:comment "常象征凋零、寒冷、岁月或衰老等诗意意象。"@zh ;
+    rdfs:comment "A poetic weather image symbolizing cold, decay, or aging."@en ;
+    rdfs:comment "冷たさ・老い・衰えを象徴する詩的な気象描写。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ColorConcept/White> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ColorConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "白"@zh ;
+    skos:prefLabel "White"@en ;
+    skos:prefLabel "白色"@ja ;
+    rdfs:comment "象征纯洁、寒冷、死亡或哀愁等多义色彩意象。"@zh ;
+    rdfs:comment "A color symbolizing purity, coldness, death, or melancholy."@en ;
+    rdfs:comment "純潔・冷たさ・死・哀しみなどを象徴する色。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Flora/LushGrass> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Flora> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "萋"@zh ;
+    skos:prefLabel "Lush Grass"@en ;
+    skos:prefLabel "生い茂る草"@ja ;
+    rdfs:comment "指茂盛丛生的草，象征荒凉或生命力。"@zh ;
+    rdfs:comment "Dense grass symbolizing vitality or desolation in poetry."@en ;
+    rdfs:comment "繁茂する草、生や荒廃の象徴。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature/WildGrassField> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "草莱"@zh ;
+    skos:prefLabel "Wild Grass Field"@en ;
+    skos:prefLabel "荒れ野"@ja ;
+    rdfs:comment "指杂草丛生、荒废无人耕作之地。"@zh ;
+    rdfs:comment "Abandoned or overgrown field symbolizing desolation or past prosperity."@en ;
+    rdfs:comment "荒れた草地、かつての繁栄の痕跡や荒廃を象徴する。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Season/Autumn> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Season> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "秋"@zh ;
+    skos:prefLabel "Autumn"@en ;
+    skos:prefLabel "秋"@ja ;
+    rdfs:comment "象征衰落、成熟、别离、思念等多重意象的季节。"@zh ;
+    rdfs:comment "A poetic season symbolizing maturity, decline, longing, or separation."@en ;
+    rdfs:comment "成熟・別れ・哀愁を象徴する詩的な季節。"@ja .
+
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept/Homesickness> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Homesickness"@en ;
+    skos:prefLabel "望郷"@ja ;
+    skos:prefLabel "思乡"@zh ;
+    rdfs:comment "表达因身处异乡、漂泊离散而引发的对故土亲人的思念之情。"@zh ;
+    rdfs:comment "A theme expressing longing for one's homeland and family, common in exile or travel poetry."@en ;
+    rdfs:comment "異郷や旅先での故郷や親族への思いを詠う詩の主題。"@ja .
+

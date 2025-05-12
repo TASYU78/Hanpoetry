@@ -1,0 +1,679 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix hp:   <http://example.org/HanpoetryOWL#> .
+@prefix hpc:  <http://example.org/HanpoetryConcept#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+<http://example.org/HanpoetryConcept> a skos:ConceptScheme ;
+    dcterms:created "2025-04-11"^^xsd:date ;
+    dcterms:creator "HUANG YANJIE" ;
+    dcterms:title "Han Poetry SKOS Vocabulary"@en ;
+    skos:prefLabel "Han Poetry Concept Vocabulary"@en,
+        "漢詩知識語彙体系"@ja,
+        "汉诗知识词表体系"@zh .
+
+<http://example.org/HanpoetryConcept#CollectionConcept/HeianPoetryCollection> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#CollectionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Heian Poetry Collection"@en,
+        "平安詩集"@ja,
+        "平安诗集"@zh .
+
+<http://example.org/HanpoetryConcept#CollectionConcept/TangPoetryCollection> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#CollectionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Tang Poetry Collection"@en,
+        "唐詩集"@ja,
+        "唐代诗集"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/FormAndStructure/Genre> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/FormAndStructure> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Genre"@en,
+        "詩体"@ja,
+        "诗体"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/FormAndStructure/Parallelism> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/FormAndStructure> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Parallelism"@en,
+        "対句構造"@ja,
+        "对仗结构"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/FormAndStructure/Structure> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/FormAndStructure> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Structure"@en,
+        "構成・章法"@ja,
+        "结构章法"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/FormAndStructure/Syntax> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/FormAndStructure> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Syntax"@en,
+        "句法構造"@ja,
+        "句法结构"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Clothing> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Clothing"@en,
+        "衣服"@ja,
+        "衣"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Food> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Food"@en,
+        "食事"@ja,
+        "食"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Housing> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Housing"@en,
+        "住居"@ja,
+        "住"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Labor/Farming> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Labor> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Farming"@en,
+        "農耕"@ja,
+        "农耕"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Labor/FetchingWater> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Labor> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Fetching Water"@en,
+        "水汲み"@ja,
+        "汲水"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Labor/Fishing> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Labor> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Fishing"@en,
+        "漁労"@ja,
+        "捕鱼"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Labor/Herding> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Labor> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Herding"@en,
+        "放牧"@ja,
+        "放牧"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Labor/Weaving> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Labor> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Weaving"@en,
+        "織物"@ja,
+        "纺织"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Labor/Woodcutting> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Labor> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Woodcutting"@en,
+        "薪取り"@ja,
+        "打柴"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Recreation> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Recreation"@en,
+        "娯楽"@ja,
+        "娱乐"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Travel> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Travel"@en,
+        "移動"@ja,
+        "行"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle/Aging> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Aging"@en,
+        "老年"@ja,
+        "年老"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle/Birth> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Birth"@en,
+        "出生"@ja,
+        "出生"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle/ComingofAge> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Coming of Age"@en,
+        "成人"@ja,
+        "成年"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle/Death> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Death"@en,
+        "死"@ja,
+        "死亡"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle/FuneralRite> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Funeral Rite"@en,
+        "葬儀"@ja,
+        "丧礼"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle/GettingMarried(Bride)> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Getting Married (Bride)"@en,
+        "嫁ぐ（女）"@ja,
+        "嫁"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle/Illness> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Illness"@en,
+        "病気"@ja,
+        "疾病"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle/Marriage(Groom)> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Marriage (Groom)"@en,
+        "結婚（男）"@ja,
+        "婚"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle/Separation> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Separation"@en,
+        "別れ"@ja,
+        "别离"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/SocialActivity/CultureAndArt> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/SocialActivity> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Culture & Art"@en,
+        "文化芸術"@ja,
+        "文化艺术"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/SocialActivity/Economy> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/SocialActivity> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Economy"@en,
+        "経済"@ja,
+        "经济"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/SocialActivity/Education> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/SocialActivity> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Education"@en,
+        "教育"@ja,
+        "教育"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/SocialActivity/Military> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/SocialActivity> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Military"@en,
+        "軍事"@ja,
+        "军事"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/SocialActivity/Politics> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/SocialActivity> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Politics"@en,
+        "政治"@ja,
+        "政治"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/SocialActivity/Religion> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/SocialActivity> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Religion"@en,
+        "宗教"@ja,
+        "宗教"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/AllusionConcept/HistoricalEvent> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/AllusionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Historical Event"@en,
+        "歴史事件"@ja,
+        "历史事件"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/AllusionConcept/HistoricalFigureAllusion> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/AllusionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Historical Figure Allusion"@en,
+        "歴史人物典拠"@ja,
+        "历史人物典故"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/AllusionConcept/LiteraryWork> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/AllusionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Literary Work"@en,
+        "文学作品"@ja,
+        "文学典籍"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/AllusionConcept/MythorLegend> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/AllusionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Myth or Legend"@en,
+        "神話・伝説"@ja,
+        "神话传说"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/AllusionConcept/PhilosophicalAllusion> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/AllusionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Philosophical Allusion"@en,
+        "哲学的引用"@ja,
+        "哲理引喻"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Anger> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Anger"@en,
+        "怒り"@ja,
+        "怒"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Delight> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Delight"@en,
+        "楽しみ"@ja,
+        "乐"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Joy> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Joy"@en,
+        "喜び"@ja,
+        "喜"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Sadness> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Sadness"@en,
+        "哀しみ"@ja,
+        "哀"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)/Appearance> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Appearance"@en,
+        "容貌"@ja,
+        "容貌"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)/Gender> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Gender"@en,
+        "性別"@ja,
+        "性别"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)/HistoricalFigure> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Historical Figure"@en,
+        "歴史人物"@ja,
+        "历史人物"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)/Profession> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Profession"@en,
+        "職業"@ja,
+        "职业"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)/SocialIdentity> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Social Identity"@en,
+        "社会的立場"@ja,
+        "社会身份"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/HumanScene/Architecture> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/HumanScene> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Architecture"@en,
+        "建築物"@ja,
+        "建筑物"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/HumanScene/Object> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/HumanScene> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Object"@en,
+        "器物"@ja,
+        "器物"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Celestial Object"@en,
+        "天体"@ja,
+        "天文"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Fauna> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Fauna"@en,
+        "動物"@ja,
+        "动物"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Flora> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Flora"@en,
+        "植物"@ja,
+        "植物"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Geographical Feature"@en,
+        "地形"@ja,
+        "地理"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SpaceConcept/Country/Region/District/City> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SpaceConcept/Country/Region/District> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "City"@en,
+        "都市"@ja,
+        "城市"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SpaceConcept/Country/Region/District/Village> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SpaceConcept/Country/Region/District> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Village"@en,
+        "農村"@ja,
+        "乡村"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept/LandscapeNature> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Landscape / Nature"@en,
+        "自然山水"@ja,
+        "自然山水"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept/MilitaryBorderCampaign> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Border Campaign"@en ;
+    skos:prefLabel "辺塞の戦い"@ja ;
+    skos:prefLabel "边塞征战"@zh ;
+    rdfs:comment "描写征战边塞、戍边守土的诗歌主题"@zh ;
+    rdfs:comment "A poetic theme depicting military expeditions and garrison life on the frontier."@en ;
+    rdfs:comment "辺境の戦いや防衛を詠み、戦争を表す主題。"@ja .
+
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept/NostalgiaAntiquity> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Nostalgia / Antiquity"@en,
+        "懐古"@ja,
+        "怀古"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept/SentimentLyric> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Sentiment / Lyric"@en,
+        "抒情"@ja,
+        "抒情"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/TimeConcept/Dynasty> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/TimeConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Dynasty"@en,
+        "王朝"@ja,
+        "朝代"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/TimeConcept/Festival> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/TimeConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Festival"@en,
+        "節日"@ja,
+        "节日"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/TimeConcept/ReignTitle> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/TimeConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Reign Title"@en,
+        "年号"@ja,
+        "年号"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/TimeConcept/Season> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/TimeConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Season"@en,
+        "季節"@ja,
+        "季节"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/TimeConcept/SolarTerm> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/TimeConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Solar Term"@en,
+        "節気"@ja,
+        "节气"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/TimeConcept/TimeofDay> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/TimeConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Time of Day"@en,
+        "時刻"@ja,
+        "时辰"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/Phonology/Rhyme> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/Phonology> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Rhyme"@en,
+        "韻脚"@ja,
+        "押韵"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/Phonology/Tone> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/Phonology> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Tone"@en,
+        "声調（平仄）"@ja,
+        "平仄"@zh .
+
+<http://example.org/HanpoetryConcept#PersonConcept/HeianPoet> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#PersonConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Heian Poet"@en,
+        "平安時代の詩人"@ja,
+        "平安诗人"@zh .
+
+<http://example.org/HanpoetryConcept#PersonConcept/OtherPerson> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#PersonConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "OtherPerson"@en,
+        "その他"@ja,
+        "其他人"@zh .
+
+<http://example.org/HanpoetryConcept#PersonConcept/TangPoet> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#PersonConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Tang Poet"@en,
+        "唐代の詩人"@ja,
+        "唐代诗人"@zh .
+
+<http://example.org/HanpoetryConcept#PoemTitleConcept> a skos:Concept ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Poem Title Concept"@en,
+        "詩題の概念"@ja,
+        "诗题概念"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SpaceConcept> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Space Concept"@en,
+        "空間の概念"@ja,
+        "空间概念"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SpaceConcept/Country> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SpaceConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Country"@en,
+        "国家"@ja,
+        "国家"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SpaceConcept/Country/Region> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SpaceConcept/Country> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Region"@en,
+        "地域"@ja,
+        "区域"@zh .
+
+<http://example.org/HanpoetryConcept#CollectionConcept> a skos:Concept ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Collection Concept"@en,
+        "詩集の概念"@ja,
+        "诗集概念"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Activity Concept"@en,
+        "活動の概念"@ja,
+        "活动概念"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Individual Activity"@en,
+        "個人活動"@ja,
+        "个体活动"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Scene Concept"@en,
+        "景物の概念"@ja,
+        "景物概念"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/HumanScene> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Human Scene"@en,
+        "人文的景物"@ja,
+        "人文景物"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SpaceConcept/Country/Region/District> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SpaceConcept/Country/Region> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "District"@en,
+        "地方"@ja,
+        "地区"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/Phonology> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Phonology"@en,
+        "音韻の概念"@ja,
+        "音类概念"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept> a skos:Concept ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Knowledge Concept"@en,
+        "知識概念"@ja,
+        "知识概念"@zh .
+
+<http://example.org/HanpoetryConcept#PersonConcept> a skos:Concept ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Person Concept"@en,
+        "人物の概念"@ja,
+        "人物概念"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/FormAndStructure> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Form & Structure"@en,
+        "形式の概念"@ja,
+        "体类概念"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Emotion Concept"@en,
+        "感情の概念"@ja,
+        "情感概念"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Natural Scene"@en,
+        "自然の景物"@ja,
+        "自然景物"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Theme Concept"@en,
+        "主題の概念"@ja,
+        "主题概念"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/AllusionConcept> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Allusion Concept"@en,
+        "典拠の概念"@ja,
+        "典故概念"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Person Concept (Meaning)"@en,
+        "人物の概念（意味）"@ja,
+        "人物概念"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Daily Life"@en,
+        "日常生活"@ja,
+        "日常生活"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Labor> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Labor"@en,
+        "労働"@ja,
+        "劳作"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/SocialActivity> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Social Activity"@en,
+        "社会活動"@ja,
+        "社会活动"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/TimeConcept> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Time Concept"@en,
+        "時間の概念"@ja,
+        "时间概念"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Meaning Concept"@en,
+        "意味の概念"@ja,
+        "义类概念"@zh .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/LifeCycle> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Life Cycle"@en,
+        "人生儀礼"@ja,
+        "人生礼俗"@zh .
+
+
+
+

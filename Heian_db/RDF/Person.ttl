@@ -1,0 +1,37 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix hp:   <http://example.org/HanpoetryOWL#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bf:   <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+##################################################################
+# 人物：菅原道真
+##################################################################
+<http://example.org/hanpoetry/resource/person/SugawaraNoMichizane> a foaf:Person ;
+    foaf:name "菅原道真"@zh ;
+    foaf:name "Sugawara no Michizane"@en ;
+    foaf:name "菅原道真"@ja ;
+    rdfs:comment "日本平安时代的政治家、学者与诗人，被尊为学问之神，擅长汉诗。"@zh ;
+    rdfs:comment "A scholar, poet, and statesman of Japan’s Heian period, revered as the deity of scholarship and known for his Chinese poetry."@en ;
+    rdfs:comment "平安時代の政治家・学者・詩人で、学問の神として崇められる。漢詩に秀でた。"@ja ;
+    hp:hasBirthDate "0845"^^xsd:gYear ;
+    hp:hasDeathDate "0903"^^xsd:gYear .
+
+##################################################################
+# 人物：市河宽斋
+##################################################################
+
+<http://example.org/hanpoetry/resource/person/IchikawaKansai> a foaf:Person ;
+    foaf:name "市河宽斋"@zh ;
+    foaf:name "Ichikawa Kansai"@en ;
+    foaf:name "市河寛斎"@ja ;
+    rdfs:comment "日本江户时代的儒学者与汉诗人，主张复古汉诗风格。"@zh ;
+    rdfs:comment "A Confucian scholar and poet of Chinese-style verse in Edo-period Japan, known for advocating classical poetic revival."@en ;
+    rdfs:comment "江戸時代の儒学者・漢詩人で、復古的な詩風を主張した。"@ja ;
+    hp:hasBirthDate "1749"^^xsd:gYear ;
+    hp:hasDeathDate "1820"^^xsd:gYear .

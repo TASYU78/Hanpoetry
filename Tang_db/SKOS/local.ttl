@@ -1,0 +1,562 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix hp:   <http://example.org/HanpoetryOWL#> .
+@prefix hpc:  <http://example.org/HanpoetryConcept#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+##################################################################
+# CollectionConcept（诗集概念）
+##################################################################
+
+# 唐代诗集 - CollectionConcept 子类
+<http://example.org/HanpoetryConcept#CollectionConcept/TangPoetryCollection> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#CollectionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "唐代诗集"@zh ,
+                   "Tang Poetry Collection"@en ,
+                   "唐詩集"@ja ;
+    skos:definition "收录以唐代为创作时期的汉诗作品集。"@zh ;
+    skos:definition "Collections of Chinese poems written during the Tang dynasty."@en ;
+    skos:definition "唐代に詠まれた漢詩を収録した詩集。"@ja .
+
+# 翻译诗集 - CollectionConcept 子类
+<http://example.org/HanpoetryConcept#CollectionConcept/TranslationCollection> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#CollectionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "翻译诗集"@zh ,
+                   "Translated Poetry Collections"@en ,
+                   "翻訳詩集"@ja ;
+    skos:definition "将汉诗翻译为其他语言而成的诗歌选集。"@zh ;
+    skos:definition "Collections of Chinese poems translated into other languages."@en ;
+    skos:definition "漢詩を他言語に翻訳した詩集。"@ja .
+
+
+# 全唐诗 - 唐代诗集子类
+<http://example.org/HanpoetryConcept#CollectionConcept/TangCollection/Quantangshi> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#CollectionConcept/TangPoetryCollection> ;
+    skos:prefLabel "全唐诗"@zh ;
+    skos:prefLabel "Complete Tang Poems (Quantangshi)"@en ;
+    skos:prefLabel "全唐詩"@ja ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:definition "最具代表性的唐代诗歌总集，清代编纂，收录两千多位诗人近五万首诗。"@zh ;
+    skos:definition "The most comprehensive anthology of Tang dynasty poetry, compiled in the Qing dynasty with nearly 50,000 poems by over 2,000 poets."@en ;
+    skos:definition "清代に編纂された、唐代の詩人約二千人による五万首近くの詩を収めた代表的な漢詩集。"@ja .
+
+# 英译唐诗精选 - 英译诗集子类
+<http://example.org/HanpoetryConcept#CollectionConcept/Translation/EnglishTangPoems> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#CollectionConcept/TranslationCollection> ;
+    skos:prefLabel "英译唐诗精选"@zh ;
+    skos:prefLabel "Selected Chinese Poems Translated into English"@en ;
+    skos:prefLabel "唐詩英訳選集"@ja ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:definition "选自《全唐诗》或其他唐代诗集中，经过英译的代表性诗歌合集。"@zh ;
+    skos:definition "A selection of Tang poems translated into English from sources such as the Complete Tang Poems."@en ;
+    skos:definition "『全唐詩』などから選ばれた詩を英語に訳した代表的な漢詩選集。"@ja .
+
+
+##################################################################
+# PersonConcept（人物概念）
+##################################################################
+
+<http://example.org/HanpoetryConcept#PersonConcept/TangPoet> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#PersonConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "唐代诗人"@zh ,
+                   "Tang Dynasty Poets"@en ,
+                   "唐代の詩人"@ja ;
+    skos:definition "生活于中国唐代并有诗作留存的诗人。"@zh ;
+    skos:definition "Poets who lived during the Tang Dynasty and composed Chinese poetry."@en ;
+    skos:definition "中国唐代に生き、詩を残した詩人たち。"@ja .
+
+
+# 李白
+<http://example.org/HanpoetryConcept#PersonConcept/TangPoet/LiBai> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#PersonConcept/TangPoet> ;
+    skos:prefLabel "李白"@zh ;
+    skos:prefLabel "Li Bai"@en ;
+    skos:prefLabel "李白"@ja ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:definition "唐代著名浪漫主义诗人，有“诗仙”之称。"@zh ;
+    skos:definition "A prominent Tang dynasty poet, known as the 'Immortal of Poetry'."@en ;
+    skos:definition "唐代の詩人、「詩仙」と称される。"@ja .
+
+# 杜甫
+<http://example.org/HanpoetryConcept#PersonConcept/TangPoet/DuFu> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#PersonConcept/TangPoet> ;
+    skos:prefLabel "杜甫"@zh ;
+    skos:prefLabel "Du Fu"@en ;
+    skos:prefLabel "杜甫"@ja ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:definition "唐代现实主义诗人，有“诗圣”之称。"@zh ;
+    skos:definition "A major realist poet of the Tang dynasty, known as the 'Sage of Poetry'."@en ;
+    skos:definition "唐代の詩人、「詩聖」と称される。"@ja .
+
+# 白居易
+<http://example.org/HanpoetryConcept#PersonConcept/TangPoet/BaiJuyi> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#PersonConcept/TangPoet> ;
+    skos:prefLabel "白居易"@zh ;
+    skos:prefLabel "Bai Juyi"@en ;
+    skos:prefLabel "白居易"@ja ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:definition "唐代诗人，主张“文章合为时而著，歌诗合为事而作”"@zh ;
+    skos:definition "A Tang dynasty poet advocating poetry for social commentary and public utility."@en ;
+    skos:definition "社会への訴えを重視した唐代の詩人。"@ja .
+
+##################################################################
+# PersonConcept 子类：OtherPerson（其他人物）
+##################################################################
+
+<http://example.org/HanpoetryConcept#PersonConcept/OtherPerson> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#PersonConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "其他人物"@zh ,
+                   "Other Relevant Figures"@en ,
+                   "その他の関連人物"@ja ;
+    skos:definition "与汉诗研究、编辑或传播相关，但不属于诗人范畴的历史人物。"@zh ;
+    skos:definition "Figures related to the study, editing, or dissemination of Han poetry, but not themselves poets."@en ;
+    skos:definition "漢詩の研究・編纂・普及に関わる人物（詩人以外）。"@ja .
+
+<http://example.org/HanpoetryConcept#PersonConcept/OtherPerson/PengDingqiu> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#PersonConcept/OtherPerson> ;
+    skos:prefLabel "彭定求"@zh ;
+    skos:prefLabel "Peng Dingqiu"@en ;
+    skos:prefLabel "彭定求"@ja ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:definition "清代学者，编纂《全唐诗》总集。"@zh ;
+    skos:definition "Qing dynasty scholar and compiler of Complete Tang Poems."@en ;
+    skos:definition "清代の学者、『全唐詩』の編纂者。"@ja .
+
+<http://example.org/HanpoetryConcept#PersonConcept/OtherPerson/Fletcher> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#PersonConcept/OtherPerson> ;
+    skos:prefLabel "W. J. B. Fletcher"@en ;
+    skos:prefLabel "威廉·约翰·班布里格·弗莱彻"@zh ;
+    skos:prefLabel "ウィリアム・ジョン・ベインブリッジ・フレッチャー"@ja ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:definition "曾任英国驻海口领事，著有《中国诗歌珍品》（1913）和《更多中国诗歌珍品》（1918，1933重印）。"@zh ;
+    skos:definition "British consul at Haikou; author of *Gems of Chinese Verse* (1913) and *More Gems of Chinese Poetry* (1918, reprinted 1933)."@en ;
+    skos:definition "海口駐在英国領事。著書に『中国詩歌珍品』（1913）、『中国詩歌珍品続編』（1918、1933重刷）など。"@ja .
+
+
+
+##################################################################
+# PoemTitleConcept（诗题概念）
+##################################################################
+
+##################################################################
+# PoemTitleConcept（诗题概念）- 李白
+##################################################################
+
+<http://example.org/HanpoetryConcept#PoemTitleConcept/shudaonan> a skos:Concept ;
+    skos:prefLabel "蜀道难"@zh ;
+    skos:prefLabel "The Road to Shu is Hard"@en ;
+    skos:prefLabel "蜀道難"@ja ;
+    skos:broader <http://example.org/HanpoetryConcept#PoemTitleConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> .
+
+<http://example.org/HanpoetryConcept#PoemTitleConcept/songchuyizhiwuchang> a skos:Concept ;
+    skos:prefLabel "送储邑之武昌"@zh ;
+    skos:prefLabel "TO WUCHANG"@en ;
+    skos:prefLabel "送储邑之武昌"@ja ;
+    skos:broader <http://example.org/HanpoetryConcept#PoemTitleConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> .
+
+<http://example.org/HanpoetryConcept#PoemTitleConcept/yuexiaduzhuo> a skos:Concept ;
+    skos:prefLabel "月下独酌"@zh ;
+    skos:prefLabel "WE THREE"@en ;
+    skos:prefLabel "月下独酌"@ja ;
+    skos:broader <http://example.org/HanpoetryConcept#PoemTitleConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> .
+
+<http://example.org/HanpoetryConcept#PoemTitleConcept/guanshanyue> a skos:Concept ;
+    skos:prefLabel "关山月"@zh ;
+    skos:prefLabel "THE MOON OVER THE PASS"@en ;
+    skos:prefLabel "関山月"@ja ;
+    skos:broader <http://example.org/HanpoetryConcept#PoemTitleConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> .
+
+
+##################################################################
+# PoemTitleConcept（诗题概念）- 杜甫
+##################################################################
+
+<http://example.org/HanpoetryConcept#PoemTitleConcept/qiuxing7> a skos:Concept ;
+    skos:prefLabel "秋兴八首·其七"@zh ;
+    skos:prefLabel "ODES TO AUTUMN No. 7"@en ;
+    skos:prefLabel "秋興八首（その七）"@ja ;
+    skos:broader <http://example.org/HanpoetryConcept#PoemTitleConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> .
+
+<http://example.org/HanpoetryConcept#PoemTitleConcept/yonghuaigujiji3> a skos:Concept ;
+    skos:prefLabel "咏怀古迹·其三"@zh ;
+    skos:prefLabel "AN ANCIENT STORY"@en ;
+    skos:prefLabel "古跡を詠ず（その三）"@ja ;
+    skos:broader <http://example.org/HanpoetryConcept#PoemTitleConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> .
+
+
+##################################################################
+# PoemTitleConcept（诗题概念）- 白居易
+##################################################################
+
+<http://example.org/HanpoetryConcept#PoemTitleConcept/xianyong> a skos:Concept ;
+    skos:prefLabel "闲咏"@zh ;
+    skos:prefLabel "Idle Chant"@en ;
+    skos:prefLabel "閑吟"@ja ;
+    skos:broader <http://example.org/HanpoetryConcept#PoemTitleConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> .
+
+<http://example.org/HanpoetryConcept#PoemTitleConcept/yebolvwang> a skos:Concept ;
+    skos:prefLabel "夜泊旅望"@zh ;
+    skos:prefLabel "Night Mooring and Traveler's View"@en ;
+    skos:prefLabel "夜泊して旅を望む"@ja ;
+    skos:broader <http://example.org/HanpoetryConcept#PoemTitleConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> .
+
+##################################################################
+#KnowledgeConcept（知识概念）
+##################################################################
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Worry> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "忧"@zh ;
+    skos:prefLabel "Worry"@en ;
+    skos:prefLabel "憂い"@ja ;
+    rdfs:comment "古典诗歌中常出现的情绪，反映对现实或命运的焦虑感。"@zh .
+
+
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Exclamation> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "感叹"@zh ;
+    skos:prefLabel "Exclamation"@en ;
+    skos:prefLabel "感嘆"@ja ;
+    rdfs:comment "诗中表达的感慨、惊叹或不平之情"@zh ;
+    rdfs:comment "Emotional outburst of awe, complaint, or reflection in poetry"@en ;
+    rdfs:comment "詩における驚きや感慨、憤りの感情表現"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)/Profession/Fisherman> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)/Profession> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "渔翁"@zh ;
+    skos:prefLabel "Fisherman"@en ;
+    skos:prefLabel "漁夫"@ja ;
+    rdfs:comment "象征隐逸、自由或哲思的诗中常见角色"@zh ;
+    rdfs:comment "Symbol of seclusion, wisdom, or freedom in classical poetry"@en ;
+    rdfs:comment "隠遁や自由、悟りの象徴として詩中によく登場する人物"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature/BirdPath> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "鸟道"@zh ;
+    skos:prefLabel "Bird Path"@en ;
+    skos:prefLabel "鳥の道"@ja ;
+    rdfs:comment "极为险峻的山路，只有鸟能飞越。"@zh ;
+    rdfs:comment "Extremely steep route, only birds can pass."@en ;
+    rdfs:comment "鳥しか通れないほど険しい山道。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject/Moon> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "月亮"@zh ;
+    skos:prefLabel "Moon"@en ;
+    skos:prefLabel "月"@ja ;
+    rdfs:comment "出现在诗中象征思念、孤独或超脱的自然意象。"@zh ;
+    rdfs:comment "A recurring image in poetry symbolizing cycles, longing, solitude, or transcendence."@en ;
+    rdfs:comment "詩において、郷愁・孤独・超脱などを象徴する自然意象。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Loneliness> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "孤独"@zh ;
+    skos:prefLabel "Loneliness"@en ;
+    skos:prefLabel "孤独"@ja ;
+    rdfs:comment "表达孤身一人、与世隔绝的情绪。"@zh ;
+    rdfs:comment "Emotion of being alone and isolated."@en ;
+    rdfs:comment "孤独であること、隔絶された心情を表す。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Frustration> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "失意"@zh ;
+    skos:prefLabel "Frustration"@en ;
+    skos:prefLabel "失意"@ja ;
+    rdfs:comment "怀才不遇、命运不济等情绪状态。"@zh ;
+    rdfs:comment "Emotion of being thwarted or unrecognized."@en ;
+    rdfs:comment "才能が認められないなどのやるせない感情。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Transcendence> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "旷达"@zh ;
+    skos:prefLabel "Transcendence"@en ;
+    skos:prefLabel "超然"@ja ;
+    rdfs:comment "看破世事、洒脱豁达的心境。"@zh ;
+    rdfs:comment "Detached and open-minded attitude toward life."@en ;
+    rdfs:comment "世俗を超えた、達観の境地を表す。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject/MilkyWay> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "云汉"@zh ;
+    skos:prefLabel "Milky Way"@en ;
+    skos:prefLabel "銀河"@ja ;
+    rdfs:comment "天上之银河，象征遥远、幻想或宇宙秩序。"@zh ;
+    rdfs:comment "The Milky Way, symbolizing distance, wonder, or cosmic order."@en ;
+    rdfs:comment "遥かなる銀河。詩中では夢・幻想・遥遠な存在を象徴。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/VisualEffect> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "视觉意象"@zh ;
+    skos:prefLabel "視覚的イメージ"@en ;
+    skos:prefLabel "銀河"@ja ;
+    rdfs:comment "A subclass of scene-related concepts based on visual impression, including shadow, reflection, and light effects."@zh ;
+    rdfs:comment "The Milky Way, symbolizing distance, wonder, or cosmic order."@en ;
+    rdfs:comment "影、反射、光などの視覚印象に基づく詩的イメージの分類。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/VisualEffect/Shadow> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/VisualEffect> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "影子"@zh ;
+    skos:prefLabel "Shadow"@en ;
+    skos:prefLabel "影"@ja ;
+    rdfs:comment "诗歌中常用以象征虚幻、孤独、自省等的视觉性意象。"@zh ;
+    rdfs:comment "A visual poetic image symbolizing illusion, loneliness, or self-reflection."@en ;
+    rdfs:comment "幻想や孤独、自我の映しなどを象徴する視覚的な詩のイメージ。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Flora/Flower> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Flora> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "花"@zh ;
+    skos:prefLabel "Shadow"@en ;
+    skos:prefLabel "花"@ja ;
+    rdfs:comment "诗歌中极常见的植物意象，象征美丽、短暂、生命、爱情等。"@zh ;
+    rdfs:comment "A common plant image in poetry symbolizing beauty, transience, life, or love."@en ;
+    rdfs:comment "美しさや儚さ、生命や愛を象徴する詩の中の植物イメージ。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Food/DrinkingAlcohol> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ActivityConcept/IndividualActivity/DailyLife/Food> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "饮酒"@zh ;
+    skos:prefLabel "Drinking Alcohol"@en ;
+    skos:prefLabel "酒を飲む"@ja ;
+    rdfs:comment "诗中常出现的行为活动，象征豪放、孤独、抒怀、交游等。"@zh ;
+    rdfs:comment "A frequent poetic activity symbolizing freedom, solitude, emotion, or social gathering."@en ;
+    rdfs:comment "詩において奔放さ、孤独、感情の発露や交友などを象徴する行為。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Unrestrained> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "狂放不羁"@zh ;
+    skos:prefLabel "Unrestrained"@en ;
+    skos:prefLabel "放蕩不羁"@ja ;
+    rdfs:comment "放浪形骸、不拘礼法的狂逸情感。"@zh ;
+    rdfs:comment "Emotion of rebellion and free spirit."@en ;
+    rdfs:comment "常識に囚われず自由奔放な感情。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Optimism> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "乐观"@zh ;
+    skos:prefLabel "Optimism"@en ;
+    skos:prefLabel "楽観"@ja ;
+    rdfs:comment "积极向上、正面思考的情感态度。"@zh ;
+    rdfs:comment "Positive emotional attitude toward life and future."@en ;
+    rdfs:comment "前向きな思考・肯定的な心。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Fauna/Crane> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Fauna> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "鹤"@zh ;
+    skos:prefLabel "Crane"@en ;
+    skos:prefLabel "鶴"@ja ;
+    rdfs:comment "常在诗中象征高洁、传说或神仙化的形象。"@zh ;
+    rdfs:comment "A bird in poetry symbolizing transcendence or spiritual elegance."@en ;
+    rdfs:comment "詩では高潔や神仙的存在の象徴として現れる。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature/YangtzeRiver> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "长江"@zh ;
+    skos:prefLabel "Yangtze River"@en ;
+    skos:prefLabel "長江"@ja ;
+    rdfs:comment "中国最长的河流，诗中常代表历史、时间、辽阔。"@zh ;
+    rdfs:comment "The longest river in China, symbolizing time and history in poetry."@en ;
+    rdfs:comment "中国最長の河川で、詩では歴史や時間の象徴となる。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Weather> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "气象"@zh ;
+    skos:prefLabel "Weather"@en ;
+    skos:prefLabel "気象"@ja ;
+    rdfs:comment "表现自然界中风、雨、雪、云等气候现象的概念。"@zh ;
+    rdfs:comment "Concepts representing climatic phenomena like wind, rain, snow, and clouds."@en ;
+    rdfs:comment "風・雨・雪・雲などの自然現象を表す概念。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Weather/Wind> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Weather> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "风"@zh ;
+    skos:prefLabel "Wind"@en ;
+    skos:prefLabel "風"@ja ;
+    rdfs:comment "诗歌中常见意象的自然气流现象"@zh ;
+    rdfs:comment "A natural airflow image"@en ;
+    rdfs:comment "詩において感情を誘う自然の風。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Admiration> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "赞美"@zh ;
+    skos:prefLabel "Admiration"@en ;
+    skos:prefLabel "讃美"@ja ;
+    rdfs:comment "表现对自然风光或壮丽景物的由衷赞美。"@zh ;
+    rdfs:comment "An emotional tone of deep praise for majestic or natural beauty."@en ;
+    rdfs:comment "壮麗な景色に対する深い称賛の感情。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature/ShuRoad> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "蜀道"@zh ;
+    skos:prefLabel "Shu Road"@en ;
+    skos:prefLabel "蜀の道"@ja ;
+    rdfs:comment "中国古代通往蜀地的高山崎岖之路，象征艰难险阻。"@zh ;
+    rdfs:comment "The perilous ancient road to Shu, symbolizing difficulty and isolation."@en ;
+    rdfs:comment "険しい山道、困難や隔絶を象徴する。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject/TheThreeStars> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "参宿 "@zh ;
+    skos:prefLabel "The Three Stars"@en ;
+    skos:prefLabel "參宿 "@ja ;
+    rdfs:comment "中国二十八宿之一。"@zh ;
+    rdfs:comment "one of the twenty-eight mansions of the Chinese constellations."@en ;
+    rdfs:comment "オリオン座に属し、複数の星からなる星官"@ja .
+
+
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject/TheWellmansion> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "井宿"@zh ;
+    skos:prefLabel "The Well mansion"@en ;
+    skos:prefLabel "井宿"@ja ;
+    rdfs:comment "中国二十八宿之一。"@zh ;
+    rdfs:comment "It is part of the southern mansions associated with the Vermilion Bird, one of the Four Symbols of Chinese astronomy."@en ;
+    rdfs:comment "二十八宿の一つで、南方朱雀七宿の第1宿。距星はふたご座μ星。"@ja .
+
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature/Waterfall> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "瀑布"@zh ;
+    skos:prefLabel "Waterfall"@en ;
+    skos:prefLabel "滝の流れ"@ja ;
+    rdfs:comment "湍急而下的水流"@zh ;
+    rdfs:comment "描绘急速而下的水流之景，象征力量或险境。"@en ;
+    rdfs:comment "勢いよく流れる水の象徴。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Fauna/Bird> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Fauna> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "鸟"@zh ;
+    skos:prefLabel "Bird"@en ;
+    skos:prefLabel "鳥"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)/HistoricalFigure/CancCong> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)/HistoricalFigure> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "蚕丛"@zh ;
+    skos:prefLabel "Can Cong"@en ;
+    skos:prefLabel "蚕叢"@ja ;
+    rdfs:comment "蜀国的传说中开国之君"@zh ;
+    rdfs:comment "A legendary king of Shu"@en ;
+    rdfs:comment "古蜀国の開国の王"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)/HistoricalFigure/Yufu> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)/HistoricalFigure> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "鱼凫"@zh ;
+    skos:prefLabel "Yu Fu"@en ;
+    skos:prefLabel "魚凫"@ja ;
+    rdfs:comment "古代蜀国君主，继蚕丛之后统治蜀地，具体事迹多属传说。"@zh ;
+    rdfs:comment "A mythical ruler of the Shu kingdom, often associated with legends following Can Cong."@en ;
+    rdfs:comment "蜀国の伝説的な王"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature/MountTaibai> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "太白山"@zh ;
+    skos:prefLabel "Mount Taibai"@en ;
+    skos:prefLabel "太白山"@ja ;
+    rdfs:comment "秦岭主峰"@zh ;
+    rdfs:comment "The main peak of the Qinling Mountains"@en ;
+    rdfs:comment "中国・秦嶺の主峰"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature/MountEmei> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "峨眉山"@zh ;
+    skos:prefLabel "Mount Emei"@en ;
+    skos:prefLabel "峨眉山"@ja ;
+    rdfs:comment "中国四大佛教名山之一，亦为川蜀山水胜景。"@zh ;
+    rdfs:comment "One of China's Four Sacred Buddhist Mountains and a famed scenic site in Sichuan."@en ;
+    rdfs:comment "中国の四大仏教名山の一つで、四川の名勝地として知られる。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept/Farewell> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "送别"@zh ;
+    skos:prefLabel "Farewell"@en ;
+    skos:prefLabel "別れ"@ja ;
+    rdfs:comment "表达亲人、朋友、恋人等在离别场景中的情感抒发，是中国古典诗歌常见主题。"@zh ;
+    rdfs:comment "A common poetic theme expressing the emotions associated with parting between friends, lovers, or kin."@en ;
+    rdfs:comment "友人や親しい人との別れを詠んだ詩の主題"@ja .
+
+
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Weather/Frost> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Weather> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "霜"@zh ;
+    skos:prefLabel "Frost"@en ;
+    skos:prefLabel "霜"@ja ;
+    rdfs:comment "常象征凋零、寒冷、岁月或衰老等诗意意象。"@zh ;
+    rdfs:comment "A poetic weather image symbolizing cold, decay, or aging."@en ;
+    rdfs:comment "冷たさ・老い・衰えを象徴する詩的な気象描写。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ColorConcept/White> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ColorConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "白"@zh ;
+    skos:prefLabel "White"@en ;
+    skos:prefLabel "白色"@ja ;
+    rdfs:comment "象征纯洁、寒冷、死亡或哀愁等多义色彩意象。"@zh ;
+    rdfs:comment "A color symbolizing purity, coldness, death, or melancholy."@en ;
+    rdfs:comment "純潔・冷たさ・死・哀しみなどを象徴する色。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Season/Autumn> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Season> ;
+    skos:inScheme <http://example.org/HanpoetryConcept> ;
+    skos:prefLabel "秋"@zh ;
+    skos:prefLabel "Autumn"@en ;
+    skos:prefLabel "秋"@ja ;
+    rdfs:comment "象征衰落、成熟、别离、思念等多重意象的季节。"@zh ;
+    rdfs:comment "A poetic season symbolizing maturity, decline, longing, or separation."@en ;
+    rdfs:comment "成熟・別れ・哀愁を象徴する詩的な季節。"@ja .
+
+<http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept/Homesickness> a skos:Concept ;
+    skos:broader <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept> ;
+    skos:inScheme <http://example.org/HanpoetryConcept#> ;
+    skos:prefLabel "Homesickness"@en ;
+    skos:prefLabel "望郷"@ja ;
+    skos:prefLabel "思乡"@zh ;
+    rdfs:comment "表达因身处异乡、漂泊离散而引发的对故土亲人的思念之情。"@zh ;
+    rdfs:comment "A theme expressing longing for one's homeland and family, common in exile or travel poetry."@en ;
+    rdfs:comment "異郷や旅先での故郷や親族への思いを詠う詩の主題。"@ja .

@@ -1,0 +1,364 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix hp:   <http://example.org/HanpoetryOWL#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bf:   <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+##################################################################
+# 知识实例：月亮（自然意象）
+##################################################################
+
+<http://example.org/hanpoetry/resource/knowledge/ImageryMoon> a hp:SceneConcept ;
+    rdfs:label "月亮"@zh ;
+    rdfs:label "Moon"@en ;
+    rdfs:label "月"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject/Moon> ;
+    rdfs:comment "出现在诗中象征思念、孤独或超脱的自然意象。"@zh ;
+    rdfs:comment "A recurring image in poetry symbolizing cycles, longing, solitude, or transcendence."@en ;
+    rdfs:comment "詩において、郷愁・孤独・超脱などを象徴する自然意象。"@ja .
+
+##################################################################
+# 知识实例：孤独（情感）
+##################################################################
+
+<http://example.org/hanpoetry/resource/knowledge/EmotionLoneliness> a hp:EmotionConcept ;
+    rdfs:label "孤独"@zh ;
+    rdfs:label "Loneliness"@en ;
+    rdfs:label "孤独"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Loneliness> ;
+    rdfs:comment "表达孤身一人、与世隔绝的情绪。"@zh ;
+    rdfs:comment "Emotion of being alone and isolated."@en ;
+    rdfs:comment "孤独であること、隔絶された心情を表す。"@ja .
+
+##################################################################
+# 知识实例：失意（情感）
+##################################################################
+
+<http://example.org/hanpoetry/resource/knowledge/EmotionFrustration> a hp:EmotionConcept ;
+    rdfs:label "失意"@zh ;
+    rdfs:label "Frustration"@en ;
+    rdfs:label "失意"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Frustration> ;
+    rdfs:comment "怀才不遇、命运不济等情绪状态。"@zh ;
+    rdfs:comment "Emotion of being thwarted or unrecognized."@en ;
+    rdfs:comment "才能が認められないなどのやるせない感情。"@ja .
+
+##################################################################
+# 知识实例：月亮（意象）
+##################################################################
+<http://example.org/hanpoetry/resource/knowledge/ImageryMoon> a hp:SceneConcept ;
+    rdfs:label "月亮"@zh ;
+    rdfs:label "Moon"@en ;
+    rdfs:label "月"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject/Moon> ;
+    rdfs:comment "出现在诗中象征思念、孤独或超脱的自然意象。"@zh ;
+    rdfs:comment "A recurring image in poetry symbolizing cycles, longing, solitude, or transcendence."@en ;
+    rdfs:comment "詩において、郷愁・孤独・超脱などを象徴する自然意象。"@ja .
+
+##################################################################
+# 知识实例：晴雪（气象）
+##################################################################
+<http://example.org/hanpoetry/resource/knowledge/WeatherSnowSunshine> a hp:SceneConcept ;
+    rdfs:label "晴雪"@zh ;
+    rdfs:label "Sunny Snow"@en ;
+    rdfs:label "晴れた雪"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Weather/SnowSunshine> ;
+    rdfs:comment "雪后放晴所呈现的洁白光辉，是诗中常见的气象意象。"@zh ;
+    rdfs:comment "A poetic meteorological image describing bright snow under clear skies."@en ;
+    rdfs:comment "晴天の雪景色を描いた詩的意象。"@ja .
+
+##################################################################
+# 知识实例：梅花（植物）
+##################################################################
+<http://example.org/hanpoetry/resource/knowledge/ImageryPlumBlossom> a hp:SceneConcept ;
+    rdfs:label "梅花"@zh ;
+    rdfs:label "Plum Blossom"@en ;
+    rdfs:label "梅の花"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Flora/PlumBlossom> ;
+    rdfs:comment "象征高洁、孤芳、逆境绽放，是中国古典诗歌中的常见植物意象。"@zh ;
+    rdfs:comment "Symbolizing purity and resilience, plum blossoms are a common poetic image."@en ;
+    rdfs:comment "純粋さや逆境に咲く力を象徴する詩的な植物意象。"@ja .
+
+##################################################################
+# 知识实例：星（天体）
+##################################################################
+<http://example.org/hanpoetry/resource/knowledge/ImageryStar> a hp:SceneConcept ;
+    rdfs:label "星"@zh ;
+    rdfs:label "Star"@en ;
+    rdfs:label "星"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject/Star> ;
+    rdfs:comment "常象征永恒、希望与遥不可及的诗歌意象。"@zh ;
+    rdfs:comment "A symbol of eternity, hope, and distance in poetic imagery."@en ;
+    rdfs:comment "詩の中で永遠や憧れを象徴する天体。"@ja .
+
+
+##################################################################
+# 知识实例：赞美（情感）
+##################################################################
+<http://example.org/hanpoetry/resource/knowledge/EmotionAdmiration> a hp:EmotionConcept ;
+    rdfs:label "赞美"@zh ;
+    rdfs:label "Admiration"@en ;
+    rdfs:label "讃美"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Admiration> ;
+    rdfs:comment "表现对自然风光或壮丽景物的由衷赞美。"@zh ;
+    rdfs:comment "An emotional tone of deep praise for majestic or natural beauty."@en ;
+    rdfs:comment "壮麗な景色に対する深い称賛の感情。"@ja .
+
+##################################################################
+# 知识实例：孤独（情感）
+##################################################################
+<http://example.org/hanpoetry/resource/knowledge/EmotionLoneliness> a hp:EmotionConcept ;
+    rdfs:label "孤独"@zh ;
+    rdfs:label "Loneliness"@en ;
+    rdfs:label "孤独"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Loneliness> ;
+    rdfs:comment "表达孤身一人、与世隔绝的情绪。"@zh ;
+    rdfs:comment "Emotion of being alone and isolated."@en ;
+    rdfs:comment "孤独であること、隔絶された心情を表す。"@ja .
+
+##################################################################
+# 知识实例：失意（情感）
+##################################################################
+<http://example.org/hanpoetry/resource/knowledge/EmotionFrustration> a hp:EmotionConcept ;
+    rdfs:label "失意"@zh ;
+    rdfs:label "Frustration"@en ;
+    rdfs:label "失意"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Frustration> ;
+    rdfs:comment "怀才不遇、命运不济等情绪状态。"@zh ;
+    rdfs:comment "Emotion of being thwarted or unrecognized."@en ;
+    rdfs:comment "才能が認められないなどのやるせない感情。"@ja .
+
+##################################################################
+# 知识实例：忧（情感）
+##################################################################
+<http://example.org/hanpoetry/resource/knowledge/EmotionWorry> a hp:EmotionConcept ;
+    rdfs:label "忧"@zh ;
+    rdfs:label "Worry"@en ;
+    rdfs:label "憂い"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/EmotionConcept/Worry> ;
+    rdfs:comment "古典诗歌中常出现的情绪，反映对现实或命运的焦虑感。"@zh ;
+    rdfs:comment "A common emotion in classical poetry reflecting anxiety about fate or reality."@en ;
+    rdfs:comment "運命や現実への不安を表す、古典詩によく見られる感情。"@ja .
+
+
+##################################################################
+# 知识实例：黄（颜色）
+##################################################################
+<http://example.org/hanpoetry/resource/knowledge/ColorYellow> a hp:ColorConcept ;
+    rdfs:label "黄"@zh ;
+    rdfs:label "Yellow"@en ;
+    rdfs:label "黄色"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ColorConcept/Yellow> ;
+    rdfs:comment "代表秋、落叶、成熟、悲伤等诗意象。"@zh ;
+    rdfs:comment "Symbolizes autumn, maturity, decay, or melancholy in poetry."@en ;
+    rdfs:comment "秋や哀愁などを象徴する詩的色彩。"@ja .
+
+##################################################################
+# 知识实例：白（颜色）
+##################################################################
+<http://example.org/hanpoetry/resource/knowledge/ColorWhite> a hp:ColorConcept ;
+    rdfs:label "白"@zh ;
+    rdfs:label "White"@en ;
+    rdfs:label "白色"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ColorConcept/White> ;
+    rdfs:comment "象征纯洁、寒冷、死亡或哀愁等多义色彩意象。"@zh ;
+    rdfs:comment "A color symbolizing purity, coldness, death, or melancholy."@en ;
+    rdfs:comment "純潔・冷たさ・死・哀しみなどを象徴する色。"@ja .
+
+
+##################################################################
+# 知识实例：霜（气象）
+##################################################################
+<http://example.org/hanpoetry/resource/knowledge/WeatherFrost> a hp:SceneConcept ;
+    rdfs:label "霜"@zh ;
+    rdfs:label "Frost"@en ;
+    rdfs:label "霜"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Weather/Frost> ;
+    rdfs:comment "常象征凋零、寒冷、岁月或衰老等诗意意象。"@zh ;
+    rdfs:comment "A poetic weather image symbolizing cold, decay, or aging."@en ;
+    rdfs:comment "冷たさ・老い・衰えを象徴する詩的な気象描写。"@ja .
+
+##################################################################
+# 知识实例：秋（季节）
+##################################################################
+<http://example.org/hanpoetry/resource/knowledge/SeasonAutumn> a hp:SceneConcept ;
+    rdfs:label "秋"@zh ;
+    rdfs:label "Autumn"@en ;
+    rdfs:label "秋"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Season/Autumn> ;
+    rdfs:comment "象征衰落、成熟、别离、思念等多重意象的季节。"@zh ;
+    rdfs:comment "A poetic season symbolizing maturity, decline, longing, or separation."@en ;
+    rdfs:comment "成熟・別れ・哀愁を象徴する詩的な季節。"@ja .
+
+##################################################################
+# 知识实例：抒情（主题）
+##################################################################
+
+<http://example.org/hanpoetry/resource/knowledge/ThemeSentimentLyric> a hp:ThemeConcept ;
+    rdfs:label "抒情"@zh ;
+    rdfs:label "Sentiment / Lyric"@en ;
+    rdfs:label "抒情"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept/SentimentLyric> ;
+    rdfs:comment "以抒发个人情感为主，不拘内容题材。"@zh ;
+    rdfs:comment "A general theme focused on the expression of personal feelings or emotions in poetry."@en ;
+    rdfs:comment "個人的感情や情緒を自由に表現する詩の主題。"@ja .
+
+<http://example.org/hanpoetry/resource/knowledge/ThemeFarewell> a hp:ThemeConcept ;
+    rdfs:label "送别"@zh ;
+    rdfs:label "Farewell"@en ;
+    rdfs:label "別れ"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept/Farewell> ;
+    rdfs:comment "表达亲人、朋友、恋人等在离别场景中的情感抒发，是中国古典诗歌常见主题。"@zh ;
+    rdfs:comment "A poetic theme expressing the emotions associated with parting between friends, lovers, or kin."@en ;
+    rdfs:comment "友人や親しい人との別れを詠んだ詩の主題。"@ja .
+
+<http://example.org/hanpoetry/resource/knowledge/ThemeHomesickness> a hp:ThemeConcept ;
+    rdfs:label "思乡"@zh ;
+    rdfs:label "Homesickness"@en ;
+    rdfs:label "望郷"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept/Homesickness> ;
+    rdfs:comment "表达因身处异乡、漂泊离散而引发的对故土亲人的思念之情。"@zh ;
+    rdfs:comment "A theme expressing longing for one's homeland and family, common in exile or travel poetry."@en ;
+    rdfs:comment "異郷や旅先での故郷や親族への思いを詠う詩の主題。"@ja .
+
+<http://example.org/hanpoetry/resource/knowledge/ThemeNostalgiaAntiquity> a hp:ThemeConcept ;
+    rdfs:label "怀古"@zh ;
+    rdfs:label "Nostalgia / Antiquity"@en ;
+    rdfs:label "懐古"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept/NostalgiaAntiquity> ;
+    rdfs:comment "借古人古事寄托今情，抒发盛衰兴亡之感。"@zh ;
+    rdfs:comment "A theme that evokes reflection on historical events or figures, often conveying melancholy or moral insight."@en ;
+    rdfs:comment "歴史や過去の人物を通して、感慨や感情を表す詩の主題。"@ja .
+
+<http://example.org/hanpoetry/resource/knowledge/ThemeBorderCampaign> a hp:ThemeConcept ;
+    rdfs:label "边塞征战"@zh ;
+    rdfs:label "Border Campaign"@en ;
+    rdfs:label "辺塞の戦い"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept/MilitaryBorderCampaign> ;
+    rdfs:comment "描写征战边塞、戍边守土的诗歌主题。"@zh ;
+    rdfs:comment "A poetic theme depicting military expeditions and garrison life on the frontier."@en ;
+    rdfs:comment "辺境の戦いや防衛を詠み、戦争を表す主題。"@ja .
+
+<http://example.org/hanpoetry/resource/knowledge/ThemeLandscapeNature> a hp:ThemeConcept ;
+    rdfs:label "自然山水"@zh ;
+    rdfs:label "Landscape / Nature"@en ;
+    rdfs:label "自然山水"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/ThemeConcept/LandscapeNature> ;
+    rdfs:comment "描写自然景物如山川、江河、风月等景象，抒发诗人对大自然的赞美、感慨与寄情。"@zh ;
+    rdfs:comment "A poetic theme describing natural landscapes such as mountains, rivers, and celestial phenomena, often conveying admiration, reflection, or personal sentiments."@en ;
+    rdfs:comment "山や川、風や月などの自然の風景を詠み、自然への賛美や感慨、思いを込めた詩の主題。"@ja .
+
+
+# 蜀道意象
+<http://example.org/hanpoetry/resource/knowledge/ImageryShuRoad> 
+    a hp:SceneConcept ;
+    rdfs:label "蜀道"@zh , "Shu Road"@en , "蜀の道"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature/ShuRoad> ;
+    rdfs:comment 
+        "中国古代通往蜀地的高山崎岖之路，象征艰难险阻。"@zh ;
+    rdfs:comment 
+        "The perilous ancient road to Shu, symbolizing difficulty and isolation."@en ;
+    rdfs:comment 
+        "険しい山道、困難や隔絶を象徴する。"@ja .
+
+# 参宿意象
+<http://example.org/hanpoetry/resource/knowledge/CelestialThreeStars> 
+    a hp:SceneConcept ;
+    rdfs:label "参宿"@zh , "The Three Stars"@en , "參宿"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject/TheThreeStars> ;
+    rdfs:comment 
+        "中国二十八宿之一。"@zh ;
+    rdfs:comment 
+        "One of the twenty-eight mansions of the Chinese constellations."@en ;
+    rdfs:comment 
+        "オリオン座に属し、複数の星からなる星官。"@ja .
+
+# 井宿意象
+<http://example.org/hanpoetry/resource/knowledge/CelestialWellMansion> 
+    a hp:SceneConcept ;
+    rdfs:label "井宿"@zh , "The Well Mansion"@en , "井宿"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/CelestialObject/TheWellmansion> ;
+    rdfs:comment 
+        "中国二十八宿之一。"@zh ;
+    rdfs:comment 
+        "It is part of the southern mansions associated with the Vermilion Bird, one of the Four Symbols of Chinese astronomy."@en ;
+    rdfs:comment 
+        "二十八宿の一つで、南方朱雀七宿の第1宿。距星はふたご座μ星。"@ja .
+
+# 瀑布意象
+<http://example.org/hanpoetry/resource/knowledge/ImageryWaterfall> 
+    a hp:SceneConcept ;
+    rdfs:label "瀑布"@zh , "Waterfall"@en , "滝の流れ"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature/Waterfall> ;
+    rdfs:comment 
+        "湍急而下的水流，象征力量或险境。"@zh ;
+    rdfs:comment 
+        "A depiction of rapidly cascading water, symbolizing power or peril."@en ;
+    rdfs:comment 
+        "勢いよく流れる水の象徴。"@ja .
+
+# 鸟类意象
+<http://example.org/hanpoetry/resource/knowledge/ImageryBird> 
+    a hp:SceneConcept ;
+    rdfs:label "鸟"@zh , "Bird"@en , "鳥"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/Fauna/Bird> ;
+    rdfs:comment 
+        "天空中自由飞翔的鸟，常象征自由、迁徙或思念。"@zh ;
+    rdfs:comment 
+        "A bird soaring in the sky, often symbolizing freedom, migration, or yearning."@en ;
+    rdfs:comment 
+        "空を飛ぶ鳥で、自由や旅立ち、郷愁を象徴する。"@ja .
+
+# 蚕丛历史形象
+<http://example.org/hanpoetry/resource/knowledge/HistoricalCancCong> 
+    a hp:PersonConcept ;
+    rdfs:label "蚕丛"@zh , "Can Cong"@en , "蚕叢"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)/HistoricalFigure/CancCong> ;
+    rdfs:comment 
+        "蜀国传说中开国之君。"@zh ;
+    rdfs:comment 
+        "A legendary king and founding ruler of the Shu kingdom."@en ;
+    rdfs:comment 
+        "伝説的な蜀国の開国王。"@ja .
+
+# 鱼凫历史形象
+<http://example.org/hanpoetry/resource/knowledge/HistoricalYuFu> 
+    a hp:PersonConcept ;
+    rdfs:label "鱼凫"@zh , "Yu Fu"@en , "魚凫"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/PersonConcept(Meaning)/HistoricalFigure/Yufu> ;
+    rdfs:comment 
+        "继蚕丛之后的蜀国统治者，多属传说。"@zh ;
+    rdfs:comment 
+        "A mythical ruler of Shu, traditionally said to succeed Can Cong."@en ;
+    rdfs:comment 
+        "蚕丛に続く、伝説的な蜀国の王。"@ja .
+
+# 太白山意象
+<http://example.org/hanpoetry/resource/knowledge/ImageryMountTaibai> 
+    a hp:SceneConcept ;
+    rdfs:label "太白山"@zh , "Mount Taibai"@en , "太白山"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature/MountTaibai> ;
+    rdfs:comment 
+        "秦岭山脉的主峰。"@zh ;
+    rdfs:comment 
+        "The principal peak of the Qinling Mountains."@en ;
+    rdfs:comment 
+        "秦嶺山脈の主峰。"@ja .
+
+# 峨眉山意象
+<http://example.org/hanpoetry/resource/knowledge/ImageryMountEmei> 
+    a hp:SceneConcept ;
+    rdfs:label "峨眉山"@zh , "Mount Emei"@en , "峨眉山"@ja ;
+    hp:hasSKOSConcept <http://example.org/HanpoetryConcept#KnowledgeConcept/MeaningConcept/SceneConcept/NaturalScene/GeographicalFeature/MountEmei> ;
+    rdfs:comment 
+        "中国四大佛教名山之一，川蜀名胜。"@zh ;
+    rdfs:comment 
+        "One of China's Four Sacred Buddhist Mountains and a famed scenic site in Sichuan."@en ;
+    rdfs:comment 
+        "中国の四大仏教名山の一つ、四川省の名高い景勝地。"@ja .

@@ -1,0 +1,51 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix hp:   <http://example.org/HanpoetryOWL#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bf:   <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+<http://example.org/hanpoetry/resource/poem/yueyejianmeihua> a hp:Poem ;
+    bf:title "月夜见梅花"@zh ;
+    bf:title "Seeing Plum Blossoms on a Moonlit Night"@en ;
+    bf:title "月夜に梅花を見る"@ja ;
+    hp:hasAuthor <http://example.org/hanpoetry/resource/person/SugawaraNoMichizane> ;
+    dct:created "9th century"@en ;
+    hp:hasKnowledge     <http://example.org/hanpoetry/resource/knowledge/ImageryMoon> ,
+                        <http://example.org/hanpoetry/resource/knowledge/WeatherSnowSunshine> ,
+                        <http://example.org/hanpoetry/resource/knowledge/ImageryPlumBlossom> ,
+                        <http://example.org/hanpoetry/resource/knowledge/ImageryStar> ,
+                        <http://example.org/hanpoetry/resource/knowledge/ImageryGoldenMirror> ,
+                        <http://example.org/hanpoetry/resource/knowledge/ImageryJadeChamber> ,
+                        <http://example.org/hanpoetry/resource/knowledge/EmotionAdmiration>,
+                        <http://example.org/hanpoetry/resource/knowledge/ThemeSentimentLyric> ;
+    hp:isRepresentedIn  <http://example.org/hanpoetry/resource/canvas/nihonsiki-vol22-SugawaraNoMichizane-yueyejianmeihua> .
+
+
+
+<http://example.org/hanpoetry/resource/poem/qiuye> a hp:Poem ;
+    bf:title "秋夜"@zh ;
+    bf:title "Autumn Night"@en ;
+    bf:title "秋の夜"@ja ;
+    hp:hasAuthor <http://example.org/hanpoetry/resource/person/SugawaraNoMichizane> ;
+    dct:created "9th century"@en ;
+    hp:hasKnowledge     <http://example.org/hanpoetry/resource/knowledge/ImageryMoon> ,
+                        <http://example.org/hanpoetry/resource/knowledge/ColorYellow> ,
+                        <http://example.org/hanpoetry/resource/knowledge/WeatherFrost> ,
+                        <http://example.org/hanpoetry/resource/knowledge/ColorWhite> ,
+                        <http://example.org/hanpoetry/resource/knowledge/ImageryLushGrass> ,
+                        <http://example.org/hanpoetry/resource/knowledge/ImageryWildGrassField> ,
+                        <http://example.org/hanpoetry/resource/knowledge/SeasonAutumn> ,
+                        <http://example.org/hanpoetry/resource/knowledge/EmotionLoneliness> ,
+                        <http://example.org/hanpoetry/resource/knowledge/EmotionFrustration> ,
+                        <http://example.org/hanpoetry/resource/knowledge/EmotionWorry> ,
+                        <http://example.org/hanpoetry/resource/knowledge/ThemeSentimentLyric> ;
+    hp:isRepresentedIn  <http://example.org/hanpoetry/resource/canvas/nihonsiki-vol22-SugawaraNoMichizane-qiuye> .
+
+
+

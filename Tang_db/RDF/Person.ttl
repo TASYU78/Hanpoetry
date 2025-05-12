@@ -1,0 +1,80 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix hp:   <http://example.org/HanpoetryOWL#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bf:   <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+##################################################################
+# 人物：李白
+##################################################################
+
+<http://example.org/hanpoetry/resource/person/LiBai> a foaf:Person ;
+    foaf:name "李白"@zh ;
+    foaf:name "Li Bai"@en ;
+    foaf:name "李白"@ja ;
+    rdfs:comment "唐代著名浪漫主义诗人，有“诗仙”之称。"@zh ;
+    rdfs:comment "A prominent Tang dynasty poet, known as the 'Immortal of Poetry'."@en ;
+    rdfs:comment "唐代の詩人、「詩仙」と称される。"@ja ;
+    hp:hasBirthDate "0701"^^xsd:gYear ;
+    hp:hasDeathDate "0762"^^xsd:gYear .
+
+##################################################################
+# 人物：杜甫
+##################################################################
+
+<http://example.org/hanpoetry/resource/person/DuFu> a foaf:Person ;
+    foaf:name "杜甫"@zh ;
+    foaf:name "Du Fu"@en ;
+    foaf:name "杜甫"@ja ;
+    rdfs:comment "唐代现实主义诗人，有“诗圣”之称。"@zh ;
+    rdfs:comment "A major realist poet of the Tang dynasty, known as the 'Sage of Poetry'."@en ;
+    rdfs:comment "唐代の詩人、「詩聖」と称される。"@ja ;
+    hp:hasBirthDate "0712"^^xsd:gYear ;
+    hp:hasDeathDate "0770"^^xsd:gYear .
+
+##################################################################
+# 人物：白居易
+##################################################################
+
+<http://example.org/hanpoetry/resource/person/BaiJuyi> a foaf:Person ;
+    foaf:name "白居易"@zh ;
+    foaf:name "Bai Juyi"@en ;
+    foaf:name "白居易"@ja ;
+    rdfs:comment "唐代诗人，主张“文章合为时而著，歌诗合为事而作”"@zh ;
+    rdfs:comment "A Tang dynasty poet advocating poetry for social commentary and public utility."@en ;
+    rdfs:comment "社会への訴えを重視した唐代の詩人。"@ja ;
+    hp:hasBirthDate "0772"^^xsd:gYear ;
+    hp:hasDeathDate "0846"^^xsd:gYear .
+
+##################################################################
+# 人物：彭定求
+##################################################################
+
+<http://example.org/hanpoetry/resource/person/pengdingqiu> a foaf:Person ;
+    foaf:name "彭定求"@zh ;
+    foaf:name "Peng Dingqiu"@en ;
+    foaf:name "彭定求"@ja ;
+    rdfs:comment "清代学者，编纂《全唐诗》总集。"@zh ;
+    rdfs:comment "Qing dynasty scholar and compiler of Complete Tang Poems."@en ;
+    rdfs:comment "清代の学者、『全唐詩』の編纂者。"@ja ;
+    hp:hasBirthDate "1645-06-02"^^xsd:date ;
+    hp:hasDeathDate "1719-05-27"^^xsd:date .
+
+##################################################################
+# 人物：William John Bainbrigge Fletcher
+##################################################################
+
+<http://example.org/hanpoetry/resource/person/fletcher> a foaf:Person ;
+    foaf:name "W. J. B. Fletcher"@en ;
+    foaf:name "威廉·约翰·班布里格·弗莱彻"@zh ;
+    foaf:name "ウィリアム・ジョン・ベインブリッジ・フレッチャー"@ja ;
+    rdfs:comment "British consul at Haikou; author of Gems of Chinese Verse (1913) and More Gems of Chinese Poetry (1918, reprinted 1933)."@en ;
+    rdfs:comment "曾任英国驻海口领事，著有《中国诗歌珍品》（1913）和《更多中国诗歌珍品》（1918，1933重印）。"@zh ;
+    rdfs:comment "海口駐在英国領事。著書に『中国詩歌珍品』（1913）、『中国詩歌珍品続編』（1918、1933重刷）など。"@ja ;
+    hp:hasBirthDate "1879-11-10"^^xsd:date ;
+    hp:hasDeathDate "1933-11-10"^^xsd:date .

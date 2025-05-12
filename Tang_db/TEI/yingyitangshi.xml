@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="yingyi_tangshi">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>英译唐诗精选</title>
+        <author>W.J.B. Fletcher</author>
+        <respStmt>
+          <resp>TEI 编码与编辑</resp>
+          <name>XMQ</name>
+        </respStmt>
+      </titleStmt>
+  
+      <publicationStmt>
+        <publisher>个人整理</publisher>
+        <pubPlace>中国</pubPlace>
+        <date>2025年4月1日</date>
+        <availability>
+          <p>仅供研究与教学使用，禁止商业用途。</p>
+        </availability>
+      </publicationStmt>
+  
+      <sourceDesc>
+        <bibl>
+          <author>W.J.B. Fletcher</author>
+          <title>Selected Chinese Poems Translated into English Verse</title>
+          <publisher>Shanghai</publisher>
+          <date>early 20th century</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  
+  
+  <text>
+    <body>
+          <div type="Poet" xml:id="Poem_of_Libai" n="1">
+            <div type="poem" xml:id="songchuyizhiwuchang" n="2">
+              <head>TO WUCHANG</head>
+                <lg n="1">
+                  <l n="1">This moon o'ershines the westward Huang Ho Lou.</l>
+                  <l n="2">A Yangtze stream my distant feelings flow.</l>     
+                </lg>
+                <lg n="2">
+                  <l n="3">Some thirty times the vernal breezes blew</l>
+                  <l n="4">Since longing thoughts to Wuchang city flew.</l>
+                </lg>
+                <lg n="3">
+                  <l n="5">To send you thither—ah! the parting's pain!</l>
+                  <l n="6">Our farewell cups unemptied yet remain.</l>
+                </lg>
+                <lg n="4">
+                  <l n="7">You lake joins on to realms of ancient bliss.</l>
+                  <l n="8">Your floating ship that hill hands on to this.</l>
+                </lg>
+                <lg n="5">
+                  <l n="9">Those Hupeh men old friends do not forget,</l>
+                  <l n="10">Like Hsieh-chao's clarity, unblemished yet.</l>
+                </lg>
+                <lg n="6">
+                  <l n="11">And so the gipsy verses I outpoured,</l>
+                  <l n="12">I send to echo round the festive board.</l>
+                </lg>
+              </div>
+            
+            <div type="poem" xml:id="yuexiaduzhuo" n="6">
+              <head>WE THREE</head>
+                <lg n="1">
+                  <l n="1">One pot of wine amid the Flowers</l>
+                  <l n="2">Alone I pour, and none with me.</l>
+                </lg>
+                <lg n="2">
+                  <l n="3">The cup I lift; the Moon invite;</l>
+                  <l n="4">Who with my shadow makes us three.</l>
+                </lg>
+                <lg n="3">
+                  <l n="5">The Moon then drinks without a pause.</l>
+                  <l n="6">The shadow does what I begin.</l>
+                </lg>
+                <lg n="4">
+                  <l n="7">The shadow, Moon and I in fere</l>
+                  <l n="8">Rejoice until the Spring come in.</l>
+                </lg>
+                <lg n="5">
+                  <l n="9">I sing: and wavers time the Moon.</l>
+                  <l n="10">I dance: the shadow antics too.</l>
+                </lg>
+                <lg n="6">
+                  <l n="11">Our joys we share while sober still.</l>
+                  <l n="12">When drunk, we part and bid adieu.</l>
+                </lg>
+                <lg n="7">
+                  <l n="13">Of loveless outing this the pact,</l>
+                  <l n="14">Which we all swear to keep for aye.</l>
+                  <l n="15">The next time that we meet shall be</l>
+                  <l n="16">Beside yon distant Milky Way.</l>
+                </lg>
+            </div>
+
+            <div type="poem" xml:id="guanshanyue" n="7">
+              <head>THE MOON OVER THE PASS</head>
+                <lg n="1">
+                  <l n="1">O'er Altai's range the Moon arises bright,</l>
+                  <l n="2">Floating in vasty seas of cloud and night.</l>
+                </lg>
+                <lg n="2">
+                  <l n="3">O'er boundless plains the shrill wind hither blows,</l>
+                  <l n="4">And whistles as o'er Yü-men Pass it goes.</l>
+                </lg>
+                <lg n="3">
+                  <l n="5">Beneath the Milky Way there stretches white</l>
+                  <l n="6">The road that leads to yonder tower-crowned height.</l>
+                  <l n="7">The eager Tatars search each hollow bay Of Tsaidam's sea.</l>
+                </lg>
+                <lg n="4">
+                  <l n="8">Nor see I come away One mortal soul of all who went to fight.</l>
+                </lg>
+                <lg n="5">
+                  <l n="9">They dwell in arms; and backward gazing pine</l>
+                  <l n="10">For frontier towns; and longing to return</l>
+                  <l n="11">O'er sad worn faces draws a bitter line.</l>
+                </lg>
+                <lg n="6">
+                  <l n="12">To-night, as from this lofty tower I yearn,</l>
+                  <l n="13">No voice reëchoes back these sighs of mine.</l>
+                </lg>
+            </div>
+
+            <div type="poem" xml:id="shudaonan" n="11">
+                <head>Hard Are the Ways of Szechuen</head>
+            
+                <lg n="1">
+                  <l n="1">Lo! how huge! how mighty!</l>
+                  <l n="2">Sheer and towering high!</l>
+                  <l n="3">Hard are the ways of Szechuen,</l>
+                  <l n="4">Harder than scaling the sky!</l>
+                </lg>
+            
+                <lg n="2">
+                  <l n="5">Monstrous surely the country</l>
+                  <l n="6">Ts'an-ts'ung and Yü-fu won...</l>
+                </lg>
+            
+                <lg n="3">
+                  <l n="7">Ages a thousand are past and done,</l>
+                  <l n="8">Yet through the Gorge of Ch'in, as then,</l>
+                  <l n="9">It access gives to worlds of men.</l>
+                </lg>
+            
+                <lg n="4">
+                  <l n="10">Westward is T'ai-po Hill,</l>
+                  <l n="11">Free to the birds alone,</l>
+                  <l n="12">Joining with Omei Mountain,</l>
+                  <l n="13">By winding paths unknown.</l>
+                </lg>
+            
+                <lg n="5">
+                  <l n="14">The earth caved in; and the hill</l>
+                  <l n="15">Snapped; and the Mighty died.</l>
+                  <l n="16">Thereafter the steps of the sky</l>
+                  <l n="17">Were joined by bridges of stone.</l>
+                </lg>
+            
+                <lg n="6">
+                  <l n="18">Above on Kao-piao Mountain</l>
+                  <l n="19">Six dragons bear back the sun.</l>
+                  <l n="20">Beneath it, a piled-up fountain,</l>
+                  <l n="21">Bursting, wild billows run.</l>
+                </lg>
+            
+                <lg n="7">
+                  <l n="22">Never attain this height</l>
+                  <l n="23">The yellow cranes in flight:</l>
+                  <l n="24">Apes are sickened of climbing,</l>
+                  <l n="25">Wearied their nervous might.</l>
+                </lg>
+            
+                <lg n="8">
+                  <l n="26">Twisted, contorted, cragged,</l>
+                  <l n="27">Winds Ch'ing-ni range afar.</l>
+                  <l n="28">Stretch from thy summit ragged;</l>
+                  <l n="29">Pluck thee a shining star!</l>
+                </lg>
+            
+                <lg n="9">
+                  <l n="30">Sitting, aloud I sigh.</l>
+                  <l n="31">My hands beat on my breast.</l>
+                </lg>
+            
+                <lg n="10">
+                  <l n="32">When come ye back, I cry,</l>
+                  <l n="33">From wandering in the West?</l>
+                  <l n="34">Roads so fearsome o'er peaks so rent</l>
+                  <l n="35">Cannot be grasped, I fear.</l>
+                </lg>
+            
+                <lg n="11">
+                  <l n="36">Wailing about old trees so bent</l>
+                  <l n="37">But sad-voiced birds I hear.</l>
+                  <l n="38">Male pursuing the female</l>
+                  <l n="39">Around the woods in flight...</l>
+                </lg>
+            
+                <lg n="12">
+                  <l n="40">Hark! How the goatsucker's moan</l>
+                  <l n="41">Sobs to the Moon by night!</l>
+                  <l n="42">Wailing its mate..A-hone!</l>
+                  <l n="43">Through vacant hills alone:</l>
+                </lg>
+            
+                <lg n="13">
+                  <l n="44">"Hard are the ways of Szechuen,</l>
+                  <l n="45">Harder than scaling the sky!"...</l>
+                  <l n="46">A fresh young face grows withered</l>
+                  <l n="47">Hearing its mournful cry.</l>
+                </lg>
+            
+                <lg n="14">
+                  <l n="48">Peaks join on to the heavens,</l>
+                  <l n="49">Scarcely a foot between.</l>
+                  <l n="50">Hollow old firs o'er-drooping</l>
+                  <l n="51">Chasms of depth unseen.</l>
+                </lg>
+            
+                <lg n="15">
+                  <l n="52">Torrents and cascades rushing</l>
+                  <l n="53">Rage with a stunning roar.</l>
+                  <l n="54">Boulders whirling before them</l>
+                  <l n="55">In thundering caverns pour.</l>
+                </lg>
+            
+                <lg n="16">
+                  <l n="56">Dangers such as are here...</l>
+                  <l n="57">Wanderers, ah! From afar!</l>
+                  <l n="58">Why come to this scene of fear?</l>
+                  <l n="59">Why come to this world of war?</l>
+                </lg>
+            
+                <lg n="17">
+                  <l n="60">Buttressed on towering rock</l>
+                  <l n="61">The Hall of Swords ascends.</l>
+                  <l n="62">Thousands can never shock</l>
+                  <l n="63">This pass, if one defends.</l>
+                </lg>
+            
+                <lg n="18">
+                  <l n="64">Mate to some bandit keeps it...</l>
+                  <l n="65">Some were-wolf, jackal he...</l>
+                  <l n="66">Shun the fierce tiger at dawn!</l>
+                  <l n="67">At eve from serpents flee!</l>
+                </lg>
+            
+                <lg n="19">
+                  <l n="68">Teeth-gnashing, blood-sucking slayers!</l>
+                  <l n="69">The people in masses fall.</l>
+                </lg>
+            
+                <lg n="20">
+                  <l n="70">Ch'eng-tu a pleasant dwelling?</l>
+                  <l n="71">Perchance. Yet better than all,</l>
+                  <l n="72">Return to thy home while early,</l>
+                  <l n="73">For fear you may hear the cry:-</l>
+                </lg>
+                <lg n="21">
+                  <l n="74">"Hard are the ways of Szechuen!</l>
+                  <l n="75">Harder than scaling the sky!"...</l>
+                  <l n="76">Turned to yon western country,</l>
+                  <l n="77">Sadly and long I sigh.</l>
+                </lg>     
+              </div> 
+          </div> 
+
+          <div type="Poet" xml:id="Poem_of_Dufu" n="2">
+            <div type="poem" xml:id="qiuxing7" n="2">
+              <head>ODES TO AUTUMN No. 7</head>
+              <lg n="1">
+                <l n="1">The waters of K’un-ming Lake: the glorious days of Han!</l>
+                <l n="2">The banners and flags of Wu Ti are flaunting before our eyes!</l>
+              </lg>
+              <lg n="2">
+                <l n="3">The Weaver Girl at her web her useless task aye plies.</l>
+                <l n="4">The whale's stone scales yet clatter to Autumn's stormy fan.</l>
+              </lg>
+              <lg n="3">
+                <l n="5">Darkly a sunken cloud is the tossing ku-mi thrown.</l>
+                <l n="6">The lilies' pink-tinged walls drop to the dewy cold.</l>
+              </lg>
+              <lg n="4">
+                <l n="7">From Po-ti, ultimate land, the Birds' Way leads alone.</l>
+                <l n="8">Rivers and lakes are many—the Fisher is lone and old!</l>
+              </lg>
+            </div>
+
+            <div type="poem" xml:id="yonghuaiguji3" n="2">
+              <head>AN ANCIENT STORY</head>
+              <lg n="1">
+                <l n="1">Round Ching-men Pass a crowd of hills, a myriad gorges soar;</l>
+                <l n="2">And here the little village that lovely Ming-fei bore.</l>
+              </lg>
+              <lg n="2">
+                <l n="3">When once she left the Purple Hall, she entered Gobi's waste.</l>
+                <l n="4">Her tomb alone through gloom unknown in verdant outline traced.</l>
+              </lg>
+              <lg n="3">
+                <l n="5">A face that breathed of Springtide how buy a picture know?</l>
+                <l n="6">With tinkling charms her soul returns amid the moonlight's glow.</l>
+              </lg>
+              <lg n="4">
+                <l n="7">A thousand years her lute has sung a mournful Tatar strain.</l>
+                <l n="8">Amidst the notes her sorrow floats to where her thoughts remain.</l>
+              </lg>
+            </div>
+          </div>
+      </body>
+  </text>
+</TEI>

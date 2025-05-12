@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="quantangshi">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>日本詩記 TEI 编码</title>
+        <title>Nihonsiki (TEI Encoding)</title>
+        <editor>XMQ</editor>
+      </titleStmt>
+      <publicationStmt>
+        <p>本 TEI 文档收录《日本诗纪》中的汉诗。</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>数据来源：日本詩記，江戸時代编</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+
+  <text>
+    <body>
+      <div type="编" xml:id="Nihonsiki-Part1" n="1">
+        <div type="集" xml:id="Nihonsiki-Collection3" n="3">
+            <div type="卷" xml:id="Nihonsikiquantangshi-Volume16" n="16">
+                <div type="诗人" xml:id="Nihonsikiquantangshi-Volume16-Poet1" n="1">
+                    <div type="Poem" xml:id="Nihonsikiquantangshi-Volume16-Poet1-Poem1" n="1">
+                        <head>月夜見梅花</head>
+                        <lg n="1">
+                            <l n="1">月耀如晴雪</l>
+                            <l n="2">梅花似照星</l>
+                          </lg>
+                          <lg n="2">
+                            <l n="3">可憐金鏡転</l>
+                            <l n="4">庭上玉房馨</l>
+                          </lg>
+                    </div>
+                </div>
+            </div>
+            
+            <div type="卷" xml:id="quantangshi-Volume22" n="22">
+                <div type="诗人" xml:id="Nihonsikiquantangshi-Volume22-Poet1" n="1">
+                    <div type="Poem" xml:id="Nihonsikiquantangshi-Volume22-Poet1-Poem2" n="2">
+                        <head>秋夜</head>
+                        <lg n="1">
+                            <l n="1">黄萋顔色白霜頭</l>
+                            <l n="2">況復千餘里外投</l>
+                          </lg>
+                          <lg n="2">
+                            <l n="3">昔被栄華簪組縛</l>
+                            <l n="4">今為貶謫草莱囚</l>
+                          </lg>
+                          <lg n="3">
+                            <l n="5">月光似鏡無明罪</l>
+                            <l n="6">風気如刀不破愁</l>
+                          </lg>
+                          <lg n="4">
+                            <l n="7">随見随聞皆惨慄</l>
+                            <l n="8">此秋独作我身秋</l>
+                          </lg>
+                    </div>
+                </div>
+            </div>   
+        </div>   
+      </div>          
+    </body>
+  </text>
+</TEI>

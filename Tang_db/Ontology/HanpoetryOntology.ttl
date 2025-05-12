@@ -1,0 +1,1015 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix hp:   <http://example.org/HanpoetryOWL#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bf:   <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+##################################################################
+# Ontology metadata
+##################################################################
+
+<http://example.org/HanpoetryOWL>
+    a owl:Ontology ;
+    rdfs:label "Han Poetry Ontology for East Asian Literature"@en ;
+    rdfs:label "東アジア漢詩のためのオントロジー"@ja ;
+    rdfs:label "东亚汉诗本体"@zh ;
+    dct:creator "HUANG YANJIE" ;
+    dct:created "2025-04-11"^^xsd:date ;
+    owl:versionInfo "v0.1" ;
+    rdfs:comment "An ontology for representing Han poetry across East Asian traditions, using BIBFRAME, FOAF, and SKOS vocabularies for integration and semantic linkage."@en ;
+    rdfs:comment "使用 BIBFRAME、FOAF 与 SKOS 词表构建的东亚汉诗表示本体，支持跨传统语义链接与集成。"@zh ;
+    rdfs:comment "BIBFRAME・FOAF・SKOS 語彙を用いた、東アジア漢詩を表現するための本体である。"@ja .
+
+##################################################################
+# Core Classes
+##################################################################
+
+hp:Knowledge a owl:Class ;
+    rdfs:label "Knowledge"@en ;
+    rdfs:label "知识"@zh ;
+    rdfs:label "知識"@ja ;
+    rdfs:comment "Abstract conceptual knowledge related to Han poetry, including imagery, themes, and genres."@en ;
+    rdfs:comment "与汉诗相关的抽象概念知识，例如意象、主题和体裁等。"@zh ;
+    rdfs:comment "漢詩に関わる抽象的な概念知識。意象、テーマ、ジャンルなどを含む。"@ja .
+
+hp:Poem a owl:Class ;
+    rdfs:subClassOf bf:Work ;
+    rdfs:label "Poem"@en ;
+    rdfs:label "诗歌"@zh ;
+    rdfs:label "詩"@ja ;
+    rdfs:comment "A specific poetic work in Han poetry tradition, modeled as a subclass of bf:Work."@en ;
+    rdfs:comment "东亚汉诗传统中的具体诗作，是 bf:Work 的子类。"@zh ;
+    rdfs:comment "東アジア漢詩の個別作品であり、bf:Workのサブクラスとしてモデル化される。"@ja .
+
+hp:Collection a owl:Class ;
+    rdfs:subClassOf bf:Work ;
+    rdfs:label "Collection"@en ;
+    rdfs:label "作品集"@zh ;
+    rdfs:label "詩集"@ja ;
+    rdfs:comment "A poetic collection or anthology that contains multiple Poem instances."@en ;
+    rdfs:comment "包含多首诗歌作品的诗集或文集。"@zh ;
+    rdfs:comment "複数の詩を含む詩集・アンソロジー。"@ja .
+
+foaf:Person a owl:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:label "人物"@zh ;
+    rdfs:label "人物"@ja ;
+    rdfs:comment "A person involved in Han poetry, such as poets, editors, or commentators."@en ;
+    rdfs:comment "参与汉诗创作与传播的个人，例如诗人、注释者或编者。"@zh ;
+    rdfs:comment "漢詩に関わる人物（詩人、編集者、注釈者など）を指す。"@ja .
+
+hp:Manifestation a owl:Class ;
+    rdfs:label "Manifestation"@en ;
+    rdfs:label "表现形式"@zh ;
+    rdfs:label "表現形態"@ja ;
+    rdfs:comment "An intermediate entity that represents how a poem appears within a specific collection or edition."@en ;
+    rdfs:comment "表示诗歌在特定作品集或版本中出现方式的中间实体。"@zh ;
+    rdfs:comment "詩が特定の詩集・版においてどのように表現されているかを示す中間エンティティ。"@ja .
+
+hp:Range a owl:Class ;
+    rdfs:label "Range"@en ;
+    rdfs:label "结构单元"@zh ;
+    rdfs:label "構造範囲"@ja ;
+    rdfs:comment "Structural subdivision of a manifestation, such as a section, chapter, or poem group."@en ;
+    rdfs:comment "Manifestation 内的结构划分单元，如章节、节选、诗组等。"@zh ;
+    rdfs:comment "表現形態の中での構造単位（章・詩群など）を示す。"@ja .
+
+hp:Canvas a owl:Class ;
+    rdfs:label "Canvas"@en ;
+    rdfs:label "展示片段"@zh ;
+    rdfs:label "表示キャンバス"@ja ;
+    rdfs:comment "Atomic display unit that presents content such as a poem, stanza, or page."@en ;
+    rdfs:comment "展示内容的基本单位，可为一首诗、一节诗句或一页内容。"@zh ;
+    rdfs:comment "詩、詩節、ページなどを表示する最小単位の表示エリア。"@ja .
+
+##################################################################
+# Knowledge Subclasses for Inference
+##################################################################
+
+
+##################################################################
+# Knowledge 子类体系扩展：Meaning（义）层
+##################################################################
+
+hp:Meaning a owl:Class ;
+    rdfs:subClassOf hp:Knowledge ;
+    rdfs:label "Meaning"@en ;
+    rdfs:label "义"@zh ;
+    rdfs:label "意味"@ja ;
+    rdfs:comment "Thematic and conceptual content of Han poetry, including time, space, person, activity, imagery, emotion, and theme."@en ;
+    rdfs:comment "汉诗的内容层面，包括时间、空间、人物、活动、意象、情感和主题等。"@zh ;
+    rdfs:comment "漢詩における主題的・概念的な内容。時間、空間、人、活動、イメージ、感情、テーマなどを含む。"@ja .
+
+# Time
+hp:TimeConcept a owl:Class ;
+    rdfs:subClassOf hp:Meaning ;
+    rdfs:label "Time Concept"@en ;
+    rdfs:label "时间概念"@zh ;
+    rdfs:label "時間の概念"@ja ;
+    rdfs:comment "Temporal expressions in poetry, including dynasty, date, season, solar terms, and time of day."@en ;
+    rdfs:comment "诗中涉及的时间表达，如朝代、年号、节气、时辰等。"@zh ;
+    rdfs:comment "漢詩に見られる時間表現（朝代、季節、節気、時刻など）。"@ja .
+
+# Space
+hp:SpaceConcept a owl:Class ;
+    rdfs:subClassOf hp:Meaning ;
+    rdfs:label "Space Concept"@en ;
+    rdfs:label "空间概念"@zh ;
+    rdfs:label "空間の概念"@ja ;
+    rdfs:comment "Spatial expressions in poetry, including locations, landscapes, and named places."@en ;
+    rdfs:comment "诗中涉及的空间场所，如地名、山川、城市、村庄等。"@zh ;
+    rdfs:comment "漢詩における場所や空間表現（地名、山河、都市、農村など）。"@ja .
+
+# Person
+hp:PersonConcept a owl:Class ;
+    rdfs:subClassOf hp:Meaning ;
+    rdfs:label "Person Concept"@en ;
+    rdfs:label "人物概念"@zh ;
+    rdfs:label "人物の概念"@ja ;
+    rdfs:comment "Human-related concepts in poetry, including gender, appearance, profession, social role, and historical figures."@en ;
+    rdfs:comment "诗中与人物相关的知识，如性别、容貌、职业、身份和历史人物等。"@zh ;
+    rdfs:comment "人物に関する詩的表現（性別、容貌、職業、社会的役割、歴史的人物など）。"@ja .
+
+hp:SceneConcept a owl:Class ;
+    rdfs:subClassOf hp:Meaning ;
+    rdfs:label "Scene Concept"@en ;
+    rdfs:label "景物概念"@zh ;
+    rdfs:label "景物の概念"@ja ;
+    rdfs:comment "Environmental and visual elements described in poetry, divided into natural and human-related scenery."@en ;
+    rdfs:comment "诗歌中描绘的环境与景物，包括自然景物与人文景物两类。"@zh ;
+    rdfs:comment "漢詩における環境や景観の描写。自然と人文の景物に分類される。"@ja .
+
+##################################################################
+# OWL 类定义：颜色概念 ColorConcept（继承 Meaning）
+##################################################################
+
+hp:ColorConcept a owl:Class ;
+    rdfs:subClassOf hp:Meaning ;
+    rdfs:label "颜色概念"@zh ;
+    rdfs:label "Color Concept"@en ;
+    rdfs:label "色の概念"@ja ;
+    rdfs:comment "诗歌中作为意象或象征出现的颜色类抽象概念。"@zh ;
+    rdfs:comment "A conceptual class representing colors as symbolic or descriptive imagery in poetry."@en ;
+    rdfs:comment "詩において象徴的・描写的な意象として用いられる色の概念。"@ja .
+
+# Activity
+hp:Activity a owl:Class ;
+    rdfs:subClassOf hp:Meaning ;
+    rdfs:label "Activity"@en ;
+    rdfs:label "活动"@zh ;
+    rdfs:label "活動"@ja ;
+    rdfs:comment "Activities in poetry, divided into individual and collective/social actions."@en ;
+    rdfs:comment "诗中描绘的个体行为与社会集体行为。"@zh ;
+    rdfs:comment "漢詩に見られる個人的および社会的な活動。"@ja .
+
+hp:IndividualActivity a owl:Class ; rdfs:subClassOf hp:Activity ; rdfs:label "Individual Activity"@en ; rdfs:label "个体活动"@zh ; rdfs:label "個人活動"@ja .
+hp:SocialActivity a owl:Class ; rdfs:subClassOf hp:Activity ; rdfs:label "Social Activity"@en ; rdfs:label "社会活动"@zh ; rdfs:label "社会活動"@ja .
+
+#Allusion 
+hp:Allusion a owl:Class ;
+    rdfs:subClassOf hp:Meaning ;
+    rdfs:label "Allusion"@en ;
+    rdfs:label "典故"@zh ;
+    rdfs:label "典拠"@ja ;
+    rdfs:comment "A reference in poetry to a known historical, literary, or cultural source."@en ;
+    rdfs:comment "诗歌中引用历史、文学或文化典籍的内容，称为典故。"@zh ;
+    rdfs:comment "詩に登場する歴史・文学・文化典拠への言及。"@ja .
+
+##################################################################
+# Knowledge 子类体系扩展：Form（体）层
+##################################################################
+
+hp:Form a owl:Class ;
+    rdfs:subClassOf hp:Knowledge ;
+    rdfs:label "Form"@en ;
+    rdfs:label "体"@zh ;
+    rdfs:label "形式"@ja ;
+    rdfs:comment "Formal structures of Han poetry, including poetic style, structure, syntax, and parallelism."@en ;
+    rdfs:comment "汉诗的形式结构层面，包括诗体、章法结构、句式和对仗等。"@zh ;
+    rdfs:comment "漢詩の形式的な構造。詩体、構成、句法、対句などを含む。"@ja .
+
+hp:Genre a owl:Class ;
+    rdfs:subClassOf hp:Form ;
+    rdfs:label "Genre"@en ;
+    rdfs:label "诗体"@zh ;
+    rdfs:label "詩体"@ja ;
+    rdfs:comment "Poetic genres such as ancient-style poetry, regulated verse, or quatrain."@en ;
+    rdfs:comment "如古体诗、近体诗、律诗、绝句等各种诗体。"@zh ;
+    rdfs:comment "古体詩、近体詩、律詩、絶句などの詩のジャンル。"@ja .
+
+hp:Structure a owl:Class ;
+    rdfs:subClassOf hp:Form ;
+    rdfs:label "Structure"@en ;
+    rdfs:label "结构章法"@zh ;
+    rdfs:label "構成・章法"@ja ;
+    rdfs:comment "Overall structural organization of a poem, such as number of lines, stanza arrangement, and compositional patterns."@en ;
+    rdfs:comment "诗的总体结构安排，如句数、章法、对称结构等。"@zh ;
+    rdfs:comment "詩の構成構造。句数、段落構成、章法などを含む。"@ja .
+
+hp:Syntax a owl:Class ;
+    rdfs:subClassOf hp:Form ;
+    rdfs:label "Syntax"@en ;
+    rdfs:label "句法结构"@zh ;
+    rdfs:label "句法構造"@ja ;
+    rdfs:comment "Syntactic features of poetic lines, including inversion, ellipsis, and sentence types."@en ;
+    rdfs:comment "诗句中的语法特征，如倒装、省略、句型变化等。"@zh ;
+    rdfs:comment "詩の句に見られる文法的特徴（倒置、省略、文型など）。"@ja .
+
+hp:Parallelism a owl:Class ;
+    rdfs:subClassOf hp:Form ;
+    rdfs:label "Parallelism"@en ;
+    rdfs:label "对仗结构"@zh ;
+    rdfs:label "対句構造"@ja ;
+    rdfs:comment "Parallel alignment of phrases or lines in poetry, often involving syntactic, semantic, and rhythmic symmetry."@en ;
+    rdfs:comment "诗句之间的对称性安排，可能涉及词性、意义与音节的对仗。"@zh ;
+    rdfs:comment "詩句間の対称的な構造（文法、意味、音の一致など）。"@ja .
+
+##################################################################
+# Knowledge 子类体系扩展：Sound（音）层
+##################################################################
+
+hp:Sound a owl:Class ;
+    rdfs:subClassOf hp:Knowledge ;
+    rdfs:label "Sound"@en ;
+    rdfs:label "音"@zh ;
+    rdfs:label "音韻"@ja ;
+    rdfs:comment "Phonological and prosodic features of Han poetry, including tonal patterns and rhyme schemes."@en ;
+    rdfs:comment "汉诗中的音韵特征，包括平仄、押韵等格律要素。"@zh ;
+    rdfs:comment "漢詩における音韻的特徴。平仄や韻脚などの詩の格律に関する要素。"@ja .
+
+hp:Tone a owl:Class ;
+    rdfs:subClassOf hp:Sound ;
+    rdfs:label "Tone"@en ;
+    rdfs:label "平仄"@zh ;
+    rdfs:label "声調（平仄）"@ja ;
+    rdfs:comment "Tonality in classical Chinese poetry, especially the use of level and oblique tones for prosodic balance."@en ;
+    rdfs:comment "古典汉诗中的声调系统，特别是平声与仄声的使用规律。"@zh ;
+    rdfs:comment "漢詩における声調。平声と仄声の配置による韻律的な調和。"@ja .
+
+hp:Rhyme a owl:Class ;
+    rdfs:subClassOf hp:Sound ;
+    rdfs:label "Rhyme"@en ;
+    rdfs:label "押韵"@zh ;
+    rdfs:label "韻脚"@ja ;
+    rdfs:comment "Rhyming schemes used in poetry, such as end rhyme and tonal rhyme in regulated verse."@en ;
+    rdfs:comment "诗歌中使用的押韵规则，包括尾韵、同声母韵等。"@zh ;
+    rdfs:comment "詩に用いられる韻脚（句末の押韻）などの韻律的な配置。"@ja .
+
+##################################################################
+# Properties
+##################################################################
+
+hp:hasSKOSConcept a owl:ObjectProperty ;
+    rdfs:label "has SKOS Concept"@en ;
+    rdfs:label "关联SKOS概念"@zh ;
+    rdfs:label "SKOS概念との関連"@ja ;
+    rdfs:domain hp:Knowledge ;
+    rdfs:range skos:Concept ;
+    rdfs:comment "Links a knowledge concept to a corresponding SKOS concept for multilingual or hierarchical vocabulary alignment."@en ;
+    rdfs:comment "将知识类概念连接到相应的SKOS词汇概念，用于多语言或层级语义对齐。"@zh ;
+    rdfs:comment "SKOS語彙の概念と接続し、多言語対応や階層的語彙の整合に用いる。"@ja .
+
+hp:denotesEntity a owl:ObjectProperty ;
+    rdfs:label "denotes Entity"@en ;
+    rdfs:label "指称实体"@zh ;
+    rdfs:label "実体とのリンク"@ja ;
+    rdfs:domain hp:Knowledge ;
+    rdfs:range owl:Thing ;  # 可连接任何语义实体
+    rdfs:comment "Links a poetic concept to the real-world or semantically defined entity it denotes or symbolizes."@en ;
+    rdfs:comment "将诗歌中的概念与其所象征或指代的现实世界实体建立连接。"@zh ;
+    rdfs:comment "詩的概念と、それが象徴する現実世界の実体を結びつける。"@ja .
+
+
+##################################################################
+# Poem 类 Properties 属性定义
+##################################################################
+
+#hasPoeticConcept
+hp:hasPoeticConcept a owl:ObjectProperty ;
+    rdfs:domain hp:Poem ;
+    rdfs:range skos:Concept ;
+    rdfs:label "has poetic concept"@en ;
+    rdfs:label "关联诗歌概念"@zh ;
+    rdfs:label "詩の概念との関連"@ja ;
+    rdfs:comment "Links a poem to a SKOS concept representing style, type, or symbolic content."@en ;
+    rdfs:comment "诗本身的 SKOS 概念连接。"@zh ;
+    rdfs:comment "詩のSKOS 概念との関連。"@ja .
+
+#hasTitle
+bf:title a owl:DatatypeProperty ;
+    rdfs:label "title"@en ;
+    rdfs:label "标题"@zh ;
+    rdfs:label "題名"@ja ;
+    rdfs:comment "The title of the poem or collection, typically as it appears in a source text."@en ;
+    rdfs:comment "诗歌或诗集的标题，通常来自原始文本中的题名。"@zh ;
+    rdfs:comment "詩や詩集の題名。原典に記載された名称に対応する。"@ja .
+
+
+# hasAuthor
+hp:hasAuthor a owl:ObjectProperty ;
+    rdfs:label "has author"@en ;
+    rdfs:label "拥有作者"@zh ;
+    rdfs:label "作者とのリンク"@ja ;
+    rdfs:domain hp:Poem ;
+    rdfs:range foaf:Person ;
+    rdfs:comment "Connects a poem to its author, modeled as a foaf:Person."@en ;
+    rdfs:comment "将诗歌与其创作者连接，创作者使用 FOAF 的 Person 表示。"@zh ;
+    rdfs:comment "詩とその作者（foaf:Person）を結びつける。"@ja .
+
+# hasCreationTime
+hp:hasCreationTime a owl:DatatypeProperty ;
+    rdfs:label "has creation time"@en ;
+    rdfs:label "创作时间"@zh ;
+    rdfs:label "作成時期"@ja ;
+    rdfs:domain hp:Poem ;
+    rdfs:range xsd:date ;
+    rdfs:comment "The date when the poem was composed or first recorded."@en ;
+    rdfs:comment "诗歌的创作或首次记录时间。"@zh ;
+    rdfs:comment "詩の創作または記録された日付。"@ja .
+
+# hasExpression
+hp:hasExpression a owl:ObjectProperty ;
+    rdfs:label "has expression"@en ;
+    rdfs:label "表达方式"@zh ;
+    rdfs:label "表現とのリンク"@ja ;
+    rdfs:domain hp:Poem ;
+    rdfs:range skos:Concept ;
+    rdfs:comment "Links a poem to a SKOS concept describing its expressive style (e.g., historical, object-descriptive)."@en ;
+    rdfs:comment "将诗歌与其表达风格（如咏史、咏物等）连接到 SKOS 概念。"@zh ;
+    rdfs:comment "詩の表現スタイル（詠史、詠物など）を表すSKOS概念との接続。"@ja .
+
+# hasKnowledge
+hp:hasKnowledge a owl:ObjectProperty ;
+    rdfs:label "has knowledge"@en ;
+    rdfs:label "关联知识"@zh ;
+    rdfs:label "関連知識"@ja ;
+    rdfs:domain hp:Poem ;
+    rdfs:range hp:Knowledge ;
+    rdfs:comment "Links a poem to relevant knowledge items such as imagery, theme, or emotion."@en ;
+    rdfs:comment "将诗歌与相关知识项（如意象、主题、情感等）建立联系。"@zh ;
+    rdfs:comment "詩と意象・主題・感情などの知識項目を接続する。"@ja .
+
+# hasCanvas
+hp:isRepresentedIn a owl:ObjectProperty ;
+    owl:inverseOf hp:representsPoem ;
+    rdfs:domain hp:Poem ;
+    rdfs:range hp:Canvas ;
+    rdfs:label "is represented in"@en ;
+    rdfs:label "被展示于"@zh ;
+    rdfs:label "に表されている"@ja ;
+    rdfs:comment "Inverse of representsPoem, used to trace from a poem to its instantiations in canvases."@en ;
+    rdfs:comment "表示某首诗在具体 Canvas 中的展示情况。"@zh ;
+    rdfs:comment "ある詩がどの Canvas に現れるかを示す逆プロパティ。"@ja .
+
+
+# hasText
+hp:hasText a owl:DatatypeProperty ;
+    rdfs:label "has text"@en ;
+    rdfs:label "原文内容"@zh ;
+    rdfs:label "原文テクスト"@ja ;
+    rdfs:domain hp:Poem ;
+    rdfs:range rdf:langString ;
+    rdfs:comment "The original textual content of the poem."@en ;
+    rdfs:comment "诗歌的原始文本内容。"@zh ;
+    rdfs:comment "詩の原文内容。"@ja .
+
+
+##################################################################
+# Collection 类 Properties 属性定义
+##################################################################
+
+hp:Collection a owl:Class ;
+    rdfs:subClassOf bf:Work ;
+    rdfs:label "Collection"@en ;
+    rdfs:label "诗集"@zh ;
+    rdfs:label "詩集"@ja ;
+    rdfs:comment "A poetry collection that contains multiple manifestations of poetic content."@en ;
+    rdfs:comment "包含多种诗歌表现形式的诗集。"@zh ;
+    rdfs:comment "さまざまな詩の表現形態を含む詩集。"@ja .
+
+hp:hasCollectionConcept a owl:ObjectProperty ;
+    rdfs:domain hp:Collection ;
+    rdfs:range skos:Concept ;
+    rdfs:label "has collection concept"@en ;
+    rdfs:label "关联诗集概念"@zh ;
+    rdfs:label "詩集概念との関連"@ja ;
+    rdfs:comment "Links the collection to a SKOS concept (e.g., period, genre, function)."@en .
+
+hp:hasDescription a owl:DatatypeProperty ;
+    rdfs:domain hp:Collection ;
+    rdfs:range rdf:langString ;
+    rdfs:label "has description"@en ;
+    rdfs:label "简介"@zh ;
+    rdfs:label "説明"@ja ;
+    rdfs:comment "Short summary or note about the collection."@en .
+
+hp:hasCreationTime a owl:DatatypeProperty ;
+    rdfs:domain hp:Collection ;
+    rdfs:range xsd:date ;
+    rdfs:label "has creation time"@en ;
+    rdfs:label "创作时间"@zh ;
+    rdfs:label "編纂時期"@ja ;
+    rdfs:comment "Compilation or publication date of the collection."@en .
+
+hp:hasAuthor a owl:ObjectProperty ;
+    rdfs:domain hp:Collection ;
+    rdfs:range foaf:Person ;
+    rdfs:label "has author"@en ;
+    rdfs:label "编者/作者"@zh ;
+    rdfs:label "編者・作者"@ja ;
+    rdfs:comment "Compiler or editor of the collection."@en .
+
+hp:hasManifestation a owl:ObjectProperty ;
+    rdfs:domain hp:Collection ;
+    rdfs:range hp:Manifestation ;
+    rdfs:label "has manifestation"@en ;
+    rdfs:label "包含表现形式"@zh ;
+    rdfs:label "表現形態を含む"@ja ;
+    rdfs:comment "Links to all Manifestation entities under this Collection."@en .
+
+#################################################################
+#Manifestation Properties 属性定义
+#################################################################
+hp:Manifestation a owl:Class ;
+    rdfs:label "Manifestation"@en ;
+    rdfs:label "表现形式"@zh ;
+    rdfs:label "表現形態"@ja ;
+    rdfs:comment "A specific version of a collection, such as a translation or annotated edition."@en .
+
+hp:isManifestedIn a owl:ObjectProperty ;
+    owl:inverseOf hp:hasManifestation ;
+    rdfs:domain hp:Manifestation ;
+    rdfs:range hp:Collection ;
+    rdfs:label "is manifested in"@en .
+
+hp:hasRange a owl:ObjectProperty ;
+    rdfs:domain hp:Manifestation ;
+    rdfs:range hp:Range ;
+    rdfs:label "has range"@en ;
+    rdfs:label "包含结构单元"@zh ;
+    rdfs:label "構造単位を含む"@ja ;
+    rdfs:comment "Links a Manifestation to its structural divisions (e.g., chapter, group)."@en .
+
+##################################################################
+# Range 类定义
+##################################################################
+
+hp:Range a owl:Class ;
+    rdfs:label "Range"@en ;
+    rdfs:label "结构单元"@zh ;
+    rdfs:label "構造範囲"@ja ;
+    rdfs:comment "Structural subdivision of a manifestation, such as a section, chapter, or poem group."@en ;
+    rdfs:comment "Manifestation 内的结构划分单元，如章节、节选、诗组等。"@zh ;
+    rdfs:comment "表現形態の中での構造単位（章・詩群など）を示す。"@ja .
+
+##################################################################
+# Range 属性定义
+##################################################################
+
+hp:inManifestation a owl:ObjectProperty ;
+    rdfs:domain hp:Range ;
+    rdfs:range hp:Manifestation ;
+    rdfs:label "in manifestation"@en ;
+    rdfs:label "所属表现形式"@zh ;
+    rdfs:label "どの表現形態に属するか"@ja ;
+    rdfs:comment "Indicates which manifestation the range belongs to."@en ;
+    rdfs:comment "表示该结构单元属于哪个表现形式。"@zh ;
+    rdfs:comment "構造単位が属する表現形態を示す。"@ja .
+
+hp:hasSubRange a owl:ObjectProperty ;
+    rdfs:domain hp:Range ;
+    rdfs:range hp:Range ;
+    rdfs:label "has subrange"@en ;
+    rdfs:label "包含子结构单元"@zh ;
+    rdfs:label "サブ構造を含む"@ja ;
+    rdfs:comment "Links a structural range to its subranges."@en ;
+    rdfs:comment "将某结构单元与其下属结构连接。"@zh ;
+    rdfs:comment "ある構造範囲とその下位の範囲を結ぶ。"@ja .
+
+hp:includesCanvas a owl:ObjectProperty ;
+    rdfs:domain hp:Range ;
+    rdfs:range hp:Canvas ;
+    rdfs:label "includes canvas"@en ;
+    rdfs:label "包含展示单元"@zh ;
+    rdfs:label "Canvas を含む"@ja ;
+    rdfs:comment "Indicates which canvases are included in the range."@en ;
+    rdfs:comment "表示该结构单元中包含哪些 Canvas。"@zh ;
+    rdfs:comment "その構造単位に含まれる Canvas を示す。"@ja .
+
+hp:rangeLabel a owl:DatatypeProperty ;
+    rdfs:domain hp:Range ;
+    rdfs:range rdf:langString ;
+    rdfs:label "range label"@en ;
+    rdfs:label "结构标题"@zh ;
+    rdfs:label "構造単位ラベル"@ja ;
+    rdfs:comment "The label of the structural range, e.g., 'Volume I', 'Chapter 3'."@en ;
+    rdfs:comment "该结构单元的标题，如“卷一”、“第三章”等。"@zh ;
+    rdfs:comment "構造範囲のタイトル（例：巻一、第三章など）。"@ja .
+
+hp:rangePosition a owl:DatatypeProperty ;
+    rdfs:domain hp:Range ;
+    rdfs:range xsd:integer ;
+    rdfs:label "range position"@en ;
+    rdfs:label "排序位置"@zh ;
+    rdfs:label "順序位置"@ja ;
+    rdfs:comment "The position or order of the range within a manifestation."@en ;
+    rdfs:comment "表示该结构单元在表现形式中的顺序。"@zh ;
+    rdfs:comment "表現形態内での構造単位の順番を示す。"@ja .
+
+
+##################################################################
+# Canvas 类定义
+##################################################################
+
+hp:Canvas a owl:Class ;
+    rdfs:label "Canvas"@en ;
+    rdfs:label "展示片段"@zh ;
+    rdfs:label "表示キャンバス"@ja ;
+    rdfs:comment "Atomic display unit that presents content such as a poem, stanza, or page."@en ;
+    rdfs:comment "展示内容的基本单位，可为一首诗、一节诗句或一页内容。"@zh ;
+    rdfs:comment "詩、詩節、ページなどを表示する最小単位の表示エリア。"@ja .
+
+##################################################################
+# Canvas 属性定义
+##################################################################
+
+hp:representsPoem a owl:ObjectProperty ;
+    rdfs:domain hp:Canvas ;
+    rdfs:range hp:Poem ;
+    rdfs:label "represents poem"@en ;
+    rdfs:label "展示诗歌"@zh ;
+    rdfs:label "詩を表す"@ja ;
+    rdfs:comment "Links a canvas to the abstract poem it represents."@en ;
+    rdfs:comment "表示该 Canvas 所呈现的诗歌抽象实体。"@zh ;
+    rdfs:comment "Canvas が表す詩の抽象的な作品へのリンク。"@ja .
+
+hp:hasTEIFragment a owl:DatatypeProperty ;
+    rdfs:domain hp:Canvas ;
+    rdfs:range xsd:anyURI ;
+    rdfs:label "has TEI fragment"@en ;
+    rdfs:label "对应 TEI 片段"@zh ;
+    rdfs:label "対応する TEI フラグメント"@ja ;
+    rdfs:comment "A URI pointing to the TEI-encoded fragment displayed on this canvas."@en ;
+    rdfs:comment "表示该 Canvas 所指向的 TEI 片段资源 URI。"@zh ;
+    rdfs:comment "Canvas に対応する TEI フラグメントへの URI を示す。"@ja .
+
+hp:hasLanguage a owl:DatatypeProperty ;
+    rdfs:domain hp:Canvas ;
+    rdfs:range xsd:language ;
+    rdfs:label "has language"@en ;
+    rdfs:label "语言"@zh ;
+    rdfs:label "言語"@ja ;
+    rdfs:comment "Indicates the language of the content displayed on the canvas."@en ;
+    rdfs:comment "表示该 Canvas 展示内容所使用的语言。"@zh ;
+    rdfs:comment "Canvas に表示される内容の言語を示す。"@ja .
+
+
+
+##################################################################
+# Person类 Properties 属性定义
+##################################################################
+
+hp:hasPersonConcept a owl:ObjectProperty ;
+    rdfs:domain foaf:Person ;
+    rdfs:range skos:Concept ;
+    rdfs:label "has person concept"@en ;
+    rdfs:label "关联人物概念"@zh ;
+    rdfs:label "人物概念との関連"@ja ;
+    rdfs:comment "Links a person to a SKOS concept representing their role, era, or cultural identity."@en ;
+    rdfs:comment "将人物与表示其身份、时代或文化归属的 SKOS 概念连接。"@zh ;
+    rdfs:comment "人物の役割・時代・文化的属性を表す SKOS 概念との関連。"@ja .
+
+hp:isAuthorOfPoem a owl:ObjectProperty ;
+    owl:inverseOf hp:hasAuthor ;
+    rdfs:domain foaf:Person ;
+    rdfs:range hp:Poem ;
+    rdfs:label "is author of poem"@en ;
+    rdfs:label "创作诗歌"@zh ;
+    rdfs:label "詩の作者である"@ja ;
+    rdfs:comment "Inverse of hasAuthor; links a person to the poems they authored."@en ;
+    rdfs:comment "hasAuthor 的反向属性，表示某人创作的诗歌。"@zh ;
+    rdfs:comment "hasAuthor の逆プロパティ。人物が書いた詩との関係。"@ja .
+
+hp:isEditorOfCollection a owl:ObjectProperty ;
+    owl:inverseOf hp:hasAuthor ;
+    rdfs:domain foaf:Person ;
+    rdfs:range hp:Collection ;
+    rdfs:label "is editor of collection"@en ;
+    rdfs:label "编者/作者（诗集）"@zh ;
+    rdfs:label "詩集の編者"@ja ;
+    rdfs:comment "Inverse of hasAuthor; links a person to the collections they edited or compiled."@en ;
+    rdfs:comment "hasAuthor 的反向属性，表示某人编纂的诗集。"@zh ;
+    rdfs:comment "hasAuthor の逆プロパティ。人物が編集した詩集との関係。"@ja .
+
+# 朝代（连接到时间概念）
+hp:hasDynasty a owl:ObjectProperty ;
+    rdfs:domain foaf:Person ;
+    rdfs:range hp:TimeConcept ;
+    rdfs:label "has dynasty"@en ;
+    rdfs:label "所属朝代"@zh ;
+    rdfs:label "王朝の所属"@ja ;
+    rdfs:comment "Links a person to the dynasty or period concept in which they lived."@en ;
+    rdfs:comment "将人物与其所属的朝代（作为知识类时间概念）关联。"@zh ;
+    rdfs:comment "人物が属する時代や王朝へのリンク。"@ja .
+
+# 出生年份
+hp:hasBirthDate a owl:DatatypeProperty ;
+    rdfs:domain foaf:Person ;
+    rdfs:range xsd:gYear ;
+    rdfs:label "has birth date"@en ;
+    rdfs:label "出生年份"@zh ;
+    rdfs:label "出生年"@ja ;
+    rdfs:comment "The year the person was born."@en ;
+    rdfs:comment "表示该人物的出生年份。"@zh ;
+    rdfs:comment "人物の生年。"@ja .
+
+# 去世年份
+hp:hasDeathDate a owl:DatatypeProperty ;
+    rdfs:domain foaf:Person ;
+    rdfs:range xsd:gYear ;
+    rdfs:label "has death date"@en ;
+    rdfs:label "去世年份"@zh ;
+    rdfs:label "没年"@ja ;
+    rdfs:comment "The year the person died."@en ;
+    rdfs:comment "表示该人物的去世年份。"@zh ;
+    rdfs:comment "人物の没年。"@ja .
+
+
+
+############################################################################
+
+####################
+# Knowledge 子类体系扩展：Time（时间类）
+####################
+
+hp:TimeConcept a owl:Class ;
+    rdfs:subClassOf hp:Meaning ;
+    rdfs:label "Time Concept"@en ;
+    rdfs:label "时间概念"@zh ;
+    rdfs:label "時間の概念"@ja ;
+    rdfs:comment "Temporal expressions in poetry, including dynasty, date, season, solar terms, and time of day."@en ;
+    rdfs:comment "诗中涉及的时间表达，如朝代、年号、节气、时辰等。"@zh ;
+    rdfs:comment "漢詩に見られる時間表現（朝代、季節、節気、時刻など）。"@ja .
+
+hp:Dynasty a owl:Class ;
+    rdfs:subClassOf hp:TimeConcept ;
+    rdfs:label "Dynasty"@en ;
+    rdfs:label "朝代"@zh ;
+    rdfs:label "王朝"@ja ;
+    rdfs:comment "Historical dynasties referenced in Han poetry, such as Tang or Song."@en ;
+    rdfs:comment "诗歌中涉及的历史朝代，如唐、宋等。"@zh ;
+    rdfs:comment "漢詩において言及される歴史王朝（唐、宋など）。"@ja .
+
+hp:ReignTitle a owl:Class ;
+    rdfs:subClassOf hp:TimeConcept ;
+    rdfs:label "Reign Title"@en ;
+    rdfs:label "年号"@zh ;
+    rdfs:label "年号"@ja ;
+    rdfs:comment "Era names used during specific reigns within a dynasty, often used to indicate time in classical texts."@en ;
+    rdfs:comment "朝代中具体皇帝的年号，如“开元”、“天平”等。"@zh ;
+    rdfs:comment "王朝の中の皇帝による特定の治世名（例：開元、天平）。"@ja .
+
+hp:Season a owl:Class ;
+    rdfs:subClassOf hp:TimeConcept ;
+    rdfs:label "Season"@en ;
+    rdfs:label "季节"@zh ;
+    rdfs:label "季節"@ja ;
+    rdfs:comment "The four seasons as poetic references: spring, summer, autumn, and winter."@en ;
+    rdfs:comment "春、夏、秋、冬等季节在诗中的表现。"@zh ;
+    rdfs:comment "春・夏・秋・冬などの季節の表現。"@ja .
+
+hp:SolarTerm a owl:Class ;
+    rdfs:subClassOf hp:TimeConcept ;
+    rdfs:label "Solar Term"@en ;
+    rdfs:label "节气"@zh ;
+    rdfs:label "節気"@ja ;
+    rdfs:comment "One of the 24 solar terms in the traditional East Asian lunisolar calendar, such as Jingzhe or Shuangjiang."@en ;
+    rdfs:comment "东亚传统农历中的24节气，如惊蛰、霜降等。"@zh ;
+    rdfs:comment "東アジアの二十四節気（驚蟄・霜降など）。"@ja .
+
+hp:Festival a owl:Class ;
+    rdfs:subClassOf hp:TimeConcept ;
+    rdfs:label "Festival"@en ;
+    rdfs:label "节日"@zh ;
+    rdfs:label "節日"@ja ;
+    rdfs:comment "Traditional festivals referenced in poetry, such as the Mid-Autumn Festival or Double Ninth Festival."@en ;
+    rdfs:comment "诗歌中出现的传统节日，如中秋节、重阳节等。"@zh ;
+    rdfs:comment "漢詩における伝統的な祝日（中秋節、重陽など）。"@ja .
+
+hp:TimeOfDay a owl:Class ;
+    rdfs:subClassOf hp:TimeConcept ;
+    rdfs:label "Time of Day"@en ;
+    rdfs:label "时辰"@zh ;
+    rdfs:label "時刻"@ja ;
+    rdfs:comment "Moments within the daily cycle in poetry, such as dawn, noon, dusk, or midnight."@en ;
+    rdfs:comment "诗中涉及的日常时段，如晨、午、昏、夜等。"@zh ;
+    rdfs:comment "詩の中で言及される一日の時刻（朝・昼・夕・夜など）。"@ja .
+
+####################
+# Knowledge 子类体系扩展：Space（空间层）
+####################
+hp:SpaceConcept a owl:Class ;
+    rdfs:subClassOf hp:Meaning ;
+    rdfs:label "Space Concept"@en ;
+    rdfs:label "空间概念"@zh ;
+    rdfs:label "空間の概念"@ja ;
+    rdfs:comment "Spatial expressions in poetry, including countries, regions, cities, or specific geographic references."@en ;
+    rdfs:comment "诗中涉及的空间表达，如国家、区域、城市、村落等地理单位。"@zh ;
+    rdfs:comment "漢詩に見られる地理的表現（国家、地域、都市、村など）。"@ja .
+
+hp:Country a owl:Class ;
+    rdfs:subClassOf hp:SpaceConcept ;
+    rdfs:label "Country"@en ;
+    rdfs:label "国家"@zh ;
+    rdfs:label "国家"@ja ;
+    rdfs:comment "Nation-states or culturally-defined countries referenced in or relevant to Han poetry, including modern distinctions when needed."@en ;
+    rdfs:comment "与汉诗相关的国家或国别实体，可包括现代国家划分，如中国、日本等。"@zh ;
+    rdfs:comment "漢詩に関連する国名や国家区分。必要に応じて現代国家（中国、日本など）も含む。"@ja .
+
+hp:Region a owl:Class ;
+    rdfs:subClassOf hp:Country ;
+    rdfs:label "Region"@en ;
+    rdfs:label "区域"@zh ;
+    rdfs:label "地域"@ja ;
+    rdfs:comment "Large-scale cultural or geographic regions within a country, such as Zhongyuan or Jiangnan."@en ;
+    rdfs:comment "国家内部的文化或地理大区，如中原、江南、塞外等。"@zh ;
+    rdfs:comment "国の中にある文化的・地理的な広域地域（中原・江南・塞外など）。"@ja .
+
+hp:District a owl:Class ;
+    rdfs:subClassOf hp:Region ;
+    rdfs:label "District"@en ;
+    rdfs:label "地区"@zh ;
+    rdfs:label "地方"@ja ;
+    rdfs:comment "Sub-regional units or named provinces mentioned in poetry."@en ;
+    rdfs:comment "较小的地理单位，如郡、道、州、区域。"@zh ;
+    rdfs:comment "郡・州・地方行政区などの地名。"@ja .
+
+hp:City a owl:Class ;
+    rdfs:subClassOf hp:District ;
+    rdfs:label "City"@en ;
+    rdfs:label "城市"@zh ;
+    rdfs:label "都市"@ja ;
+    rdfs:comment "Urban centers or historical capitals mentioned in Han poetry."@en ;
+    rdfs:comment "诗中常见的城市名称，如长安、洛阳等。"@zh ;
+    rdfs:comment "詩中に現れる都市の名称（長安・洛陽など）。"@ja .
+
+hp:Village a owl:Class ;
+    rdfs:subClassOf hp:District ;
+    rdfs:label "Village"@en ;
+    rdfs:label "乡村"@zh ;
+    rdfs:label "農村"@ja ;
+    rdfs:comment "Rural or pastoral locations evoked in poetic imagery."@en ;
+    rdfs:comment "表现自然田园、乡村生活的地理意象，如村落、田野等。"@zh ;
+    rdfs:comment "田園や村の風景を描写する場所（村・農地など）。"@ja .
+
+####################
+# Knowledge 子类体系扩展：PersonConcept(人物层)
+####################
+
+hp:PersonConcept a owl:Class ;
+    rdfs:subClassOf hp:Meaning ;
+    rdfs:label "Person Concept"@en ;
+    rdfs:label "人物概念"@zh ;
+    rdfs:label "人物の概念"@ja ;
+    rdfs:comment "Human-related conceptual knowledge in poetry, including gender, appearance, occupation, social identity, and historical individuals."@en ;
+    rdfs:comment "诗中与人物相关的知识，如性别、容貌、职业、身份和历史人物等。"@zh ;
+    rdfs:comment "詩に現れる人物に関する知識。性別、容貌、職業、身分、歴史人物などを含む。"@ja .
+
+hp:Gender a owl:Class ;
+    rdfs:subClassOf hp:PersonConcept ;
+    rdfs:label "Gender"@en ;
+    rdfs:label "性别"@zh ;
+    rdfs:label "性別"@ja ;
+    rdfs:comment "Gender-related references in poetry, such as male, female, or other culturally defined roles."@en ;
+    rdfs:comment "诗歌中表现的性别差异，如男性、女性等角色。"@zh ;
+    rdfs:comment "詩に登場する性別表現（男性・女性など）。"@ja .
+
+hp:Appearance a owl:Class ;
+    rdfs:subClassOf hp:PersonConcept ;
+    rdfs:label "Appearance"@en ;
+    rdfs:label "容貌"@zh ;
+    rdfs:label "容貌"@ja ;
+    rdfs:comment "Physical appearance or characteristics mentioned in poetic descriptions."@en ;
+    rdfs:comment "诗中描写人物容貌或体貌特征。"@zh ;
+    rdfs:comment "人物の容貌・外見に関する詩的描写。"@ja .
+
+hp:Profession a owl:Class ;
+    rdfs:subClassOf hp:PersonConcept ;
+    rdfs:label "Profession"@en ;
+    rdfs:label "职业"@zh ;
+    rdfs:label "職業"@ja ;
+    rdfs:comment "Professions and occupational roles represented in poetry, such as scholar, official, or monk."@en ;
+    rdfs:comment "诗中出现的职业身份，如士人、官吏、僧侣等。"@zh ;
+    rdfs:comment "詩に登場する職業（文人・官吏・僧侶など）。"@ja .
+
+hp:SocialIdentity a owl:Class ;
+    rdfs:subClassOf hp:PersonConcept ;
+    rdfs:label "Social Identity"@en ;
+    rdfs:label "社会身份"@zh ;
+    rdfs:label "社会的立場"@ja ;
+    rdfs:comment "Social roles or statuses referenced in poetry, such as exile, recluse, or noble."@en ;
+    rdfs:comment "诗中反映的社会身份地位，如流放者、隐士、贵族等。"@zh ;
+    rdfs:comment "詩における社会的な身分や立場（放逐者・隠者・貴族など）。"@ja .
+
+hp:HistoricalFigure a owl:Class ;
+    rdfs:subClassOf hp:PersonConcept ;
+    rdfs:label "Historical Figure"@en ;
+    rdfs:label "历史人物"@zh ;
+    rdfs:label "歴史人物"@ja ;
+    rdfs:comment "Named historical individuals appearing in Han poetry, such as Confucius, Qu Yuan, or Emperor Xuanzong."@en ;
+    rdfs:comment "诗歌中提及的具体历史人物，如孔子、屈原、玄宗等。"@zh ;
+    rdfs:comment "漢詩に登場する歴史上の人物（孔子・屈原・玄宗など）。"@ja .
+
+hp:refersToPerson a owl:ObjectProperty ;
+    rdfs:domain hp:HistoricalFigure ;
+    rdfs:range foaf:Person ;
+    rdfs:label "refers to person"@en ;
+    rdfs:label "指向人物"@zh ;
+    rdfs:label "人物を指す"@ja ;
+    rdfs:comment "Links a historical figure concept to the actual person entity it denotes."@en ;
+    rdfs:comment "将历史人物知识概念连接到其对应的 foaf:Person 实体。"@zh ;
+    rdfs:comment "歴史人物の知識概念と対応する foaf:Person 実体を結ぶ。"@ja .
+
+
+
+##################################################################
+# Knowledge 子类体系扩展：SceneConcept（景物）层
+##################################################################
+
+hp:SceneConcept a owl:Class ;
+    rdfs:subClassOf hp:Meaning ;
+    rdfs:label "Scene Concept"@en ;
+    rdfs:label "景物概念"@zh ;
+    rdfs:label "景物の概念"@ja ;
+    rdfs:comment "Environmental and visual elements described in poetry, divided into natural and human-related scenery."@en ;
+    rdfs:comment "诗歌中描绘的环境与景物，包括自然景物与人文景物两类。"@zh ;
+    rdfs:comment "漢詩における環境や景観・器物などの描写。自然と人文の景物に分類される。"@ja .
+
+hp:NaturalScene a owl:Class ;
+    rdfs:subClassOf hp:SceneConcept ;
+    rdfs:label "Natural Scene"@en ;
+    rdfs:label "自然景物"@zh ;
+    rdfs:label "自然の景物"@ja ;
+    rdfs:comment "Natural elements such as celestial bodies, terrain, flora and fauna."@en ;
+    rdfs:comment "自然界中的要素，如天文、地理、动植物等。"@zh ;
+    rdfs:comment "自然に関わる景物（天文・地形・動植物など）。"@ja .
+
+hp:Celestial a owl:Class ;
+    rdfs:subClassOf hp:NaturalScene ;
+    rdfs:label "Celestial Object"@en ;
+    rdfs:label "天文"@zh ;
+    rdfs:label "天体"@ja ;
+    rdfs:comment "Astronomical phenomena or objects, such as the sun, moon, or stars."@en ;
+    rdfs:comment "诗中出现的天体或天象，如日、月、星等。"@zh ;
+    rdfs:comment "詩に登場する天体や天文現象（日・月・星など）。"@ja .
+
+hp:Landscape a owl:Class ;
+    rdfs:subClassOf hp:NaturalScene ;
+    rdfs:label "Geographical Feature"@en ;
+    rdfs:label "地理"@zh ;
+    rdfs:label "地形"@ja ;
+    rdfs:comment "Natural terrain and geographic elements, such as mountains, rivers, lakes."@en ;
+    rdfs:comment "自然地形，如山、河、湖等。"@zh ;
+    rdfs:comment "山・川・湖などの自然地形。"@ja .
+
+hp:FloraFauna a owl:Class ;
+    rdfs:subClassOf hp:NaturalScene ;
+    rdfs:label "Flora and Fauna"@en ;
+    rdfs:label "动植物"@zh ;
+    rdfs:label "動植物"@ja ;
+    rdfs:comment "Plants and animals mentioned in poetry, including symbolic species."@en ;
+    rdfs:comment "诗中提到的动植物，如松、竹、鹤、马等。"@zh ;
+    rdfs:comment "詩に現れる動植物（松・竹・鶴・馬など）。"@ja .
+
+hp:HumanScene a owl:Class ;
+    rdfs:subClassOf hp:SceneConcept ;
+    rdfs:label "Human Scene"@en ;
+    rdfs:label "人文景物"@zh ;
+    rdfs:label "人文的景物"@ja ;
+    rdfs:comment "Man-made or culturally symbolic objects and structures in poetic imagery."@en ;
+    rdfs:comment "诗中描绘的人造或人文象征性景物，如器物、建筑等。"@zh ;
+    rdfs:comment "詩に描かれる人工物や文化的象徴（器物・建築など）。"@ja .
+
+hp:Object a owl:Class ;
+    rdfs:subClassOf hp:HumanScene ;
+    rdfs:label "Object"@en ;
+    rdfs:label "器物"@zh ;
+    rdfs:label "器物"@ja ;
+    rdfs:comment "Tools, instruments, or everyday objects referenced in poetry."@en ;
+    rdfs:comment "诗中提到的器具、乐器或日常用品。"@zh ;
+    rdfs:comment "詩に出てくる器具や生活用品。"@ja .
+
+hp:Architecture a owl:Class ;
+    rdfs:subClassOf hp:HumanScene ;
+    rdfs:label "Architecture"@en ;
+    rdfs:label "建筑物"@zh ;
+    rdfs:label "建築物"@ja ;
+    rdfs:comment "Buildings or structures that carry cultural or symbolic meaning in poetry."@en ;
+    rdfs:comment "诗中具有文化意义的建筑物，如楼阁、寺庙、桥梁等。"@zh ;
+    rdfs:comment "文化的意味を持つ建築物（楼閣・寺院・橋など）。"@ja .
+
+##################################################################
+# Knowledge 子类体系扩展：Activity（活动）层
+##################################################################
+
+hp:Activity a owl:Class ;
+    rdfs:subClassOf hp:Meaning ;
+    rdfs:label "Activity"@en ;
+    rdfs:label "活动"@zh ;
+    rdfs:label "活動"@ja ;
+    rdfs:comment "Activities in poetry, categorized into individual and social dimensions."@en ;
+    rdfs:comment "诗歌中描写的活动，包括个体行为与社会行为两类。"@zh ;
+    rdfs:comment "漢詩における活動。個人的行動と社会的行動に分類される。"@ja .
+
+hp:IndividualActivity a owl:Class ;
+    rdfs:subClassOf hp:Activity ;
+    rdfs:label "Individual Activity"@en ;
+    rdfs:label "个体活动"@zh ;
+    rdfs:label "個人活動"@ja ;
+    rdfs:comment "Personal or daily life actions such as eating, traveling, resting."@en ;
+    rdfs:comment "个体生活中常见的行为，如衣食住行。"@zh ;
+    rdfs:comment "日常生活に関わる個人の行為（衣・食・住・移動など）。"@ja .
+
+hp:SocialActivity a owl:Class ;
+    rdfs:subClassOf hp:Activity ;
+    rdfs:label "Social Activity"@en ;
+    rdfs:label "社会活动"@zh ;
+    rdfs:label "社会活動"@ja ;
+    rdfs:comment "Collective or institutional activities referenced in poetry."@en ;
+    rdfs:comment "诗中涉及的集体性或制度性社会活动。"@zh ;
+    rdfs:comment "詩において言及される集団的または制度的な行動。"@ja .
+
+hp:Politics a owl:Class ; rdfs:subClassOf hp:SocialActivity ; rdfs:label "Politics"@en ; rdfs:label "政治"@zh ; rdfs:label "政治"@ja .
+hp:Economy a owl:Class ; rdfs:subClassOf hp:SocialActivity ; rdfs:label "Economy"@en ; rdfs:label "经济"@zh ; rdfs:label "経済"@ja .
+hp:Military a owl:Class ; rdfs:subClassOf hp:SocialActivity ; rdfs:label "Military"@en ; rdfs:label "军事"@zh ; rdfs:label "軍事"@ja .
+hp:Religion a owl:Class ; rdfs:subClassOf hp:SocialActivity ; rdfs:label "Religion"@en ; rdfs:label "宗教"@zh ; rdfs:label "宗教"@ja .
+hp:Culture a owl:Class ; rdfs:subClassOf hp:SocialActivity ; rdfs:label "Culture and Art"@en ; rdfs:label "文化艺术"@zh ; rdfs:label "文化・芸術"@ja .
+hp:Education a owl:Class ; rdfs:subClassOf hp:SocialActivity ; rdfs:label "Education"@en ; rdfs:label "教育"@zh ; rdfs:label "教育"@ja .
+
+
+##################################################################
+# Knowledge 子类体系扩展：Allusion（典故）层
+##################################################################
+hp:HistoricalAllusion a owl:Class ;
+    rdfs:subClassOf hp:Allusion ;
+    rdfs:label "Historical Allusion"@en ;
+    rdfs:label "历史典故"@zh ;
+    rdfs:label "歴史的典拠"@ja ;
+    rdfs:comment "A reference to a historical person or event."@en ;
+    rdfs:comment "涉及历史人物或事件的典故。"@zh ;
+    rdfs:comment "歴史人物・出来事に関する典拠。"@ja .
+
+hp:LiteraryAllusion a owl:Class ;
+    rdfs:subClassOf hp:Allusion ;
+    rdfs:label "Literary Allusion"@en ;
+    rdfs:label "文学典故"@zh ;
+    rdfs:label "文学的典拠"@ja ;
+    rdfs:comment "A reference to a literary text or quotation."@en ;
+    rdfs:comment "引用文学作品或文句的典故。"@zh ;
+    rdfs:comment "文学作品・句に関する典拠。"@ja .
+
+hp:MythicalAllusion a owl:Class ;
+    rdfs:subClassOf hp:Allusion ;
+    rdfs:label "Mythical Allusion"@en ;
+    rdfs:label "神话典故"@zh ;
+    rdfs:label "神話的典拠"@ja ;
+    rdfs:comment "A reference to mythological stories or characters."@en ;
+    rdfs:comment "源自神话人物或故事的典故。"@zh ;
+    rdfs:comment "神話の登場人物・出来事に関する典拠。"@ja .
+
+hp:refersToPerson a owl:ObjectProperty ;
+    rdfs:domain hp:Allusion ;
+    rdfs:range foaf:Person ;
+    rdfs:label "refers to person"@en ;
+    rdfs:label "指向人物"@zh ;
+    rdfs:label "人物を指す"@ja ;
+    rdfs:comment "The person mentioned or implied in the allusion."@en ;
+    rdfs:comment "典故中提及或影射的人物。"@zh ;
+    rdfs:comment "典拠に登場または暗示される人物。"@ja .
+
+hp:refersToText a owl:ObjectProperty ;
+    rdfs:domain hp:Allusion ;
+    rdfs:range bf:Work ;
+    rdfs:label "refers to text"@en ;
+    rdfs:label "引用原文"@zh ;
+    rdfs:label "典拠テキスト"@ja ;
+    rdfs:comment "The classical source text in which the allusion originates."@en ;
+    rdfs:comment "典故所引用的经典文献或句子来源。"@zh ;
+    rdfs:comment "典拠が出典とする古典文献。"@ja .
+
+hp:refersToEvent a owl:ObjectProperty ;
+    rdfs:domain hp:Allusion ;
+    rdfs:range hp:HistoricalEvent ;
+    rdfs:label "refers to event"@en ;
+    rdfs:label "关联事件"@zh ;
+    rdfs:label "出来事を指す"@ja ;
+    rdfs:comment "Links the allusion to the historical or cultural event it refers to."@en ;
+    rdfs:comment "将典故与其所涉及的历史或文化事件连接。"@zh ;
+    rdfs:comment "典拠が言及する出来事を指す。"@ja .
+
+

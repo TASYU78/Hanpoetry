@@ -1,0 +1,80 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix hp:   <http://example.org/HanpoetryOWL#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bf:   <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+##################################################################
+# Collection: Nihonsiki 《日本诗纪》
+##################################################################
+<http://example.org/hanpoetry/resource/collection/nihonsiki> a hp:Collection ;
+    rdfs:label "日本诗纪"@zh ;
+    rdfs:label "Nihonshiki"@en ;
+    rdfs:label "日本詩紀"@ja ;
+    hp:hasCollectionConcept <http://example.org/hanpoetry/resource/concept/pinganCollection> ;
+    hp:hasDescription "奈良至平安初期编纂的汉诗总集，保存了大量日本早期汉诗作品。"@zh ;
+    hp:hasCreationTime "814-01-01"^^xsd:date ;
+    hp:hasAuthor <http://example.org/hanpoetry/resource/person/IchikawaKansai> ;
+    hp:hasManifestation <http://example.org/hanpoetry/resource/manifestation/nihonsiki-takasima> .
+
+<http://example.org/hanpoetry/resource/manifestation/nihonsiki-takasima> a hp:Manifestation ;
+    hp:isManifestedIn <http://example.org/hanpoetry/resource/collection/nihonsiki> ;
+    hp:hasManifestedTitle "日本诗纪"@zh ;
+    hp:hasManifestedTitle "Nihonshiki (Chinese Original)"@en ;
+    hp:hasManifestedTitle "日本詩紀"@ja ;
+    hp:hasLanguage "zh" ;
+    hp:hasSequenceNumber 1 .
+
+<http://example.org/hanpoetry/resource/range/nihonsiki-mainpart> a hp:Range ;
+    hp:inManifestation <http://example.org/hanpoetry/resource/manifestation/nihonsiki-takasima> ;
+    rdfs:label "正编"@zh ;
+    rdfs:label "Main Part"@en ;
+    rdfs:label "正編"@ja ;
+    hp:rangePosition 1 .
+
+<http://example.org/hanpoetry/resource/range/nihonsiki-collectionC> a hp:Range ;
+    hp:isSubRangeOf <http://example.org/hanpoetry/resource/range/nihonsiki-mainpart> ;
+    rdfs:label "丙集"@zh ;
+    rdfs:label "Collection A"@en ;
+    rdfs:label "丙集"@ja ;
+    hp:rangePosition 3 .
+
+<http://example.org/hanpoetry/resource/range/nihonsiki-vol22> a hp:Range ;
+    hp:isSubRangeOf <http://example.org/hanpoetry/resource/range/nihonsiki-collectionC> ;
+    rdfs:label "卷二十二"@zh ;
+    rdfs:label "Volume 2"@en ;
+    rdfs:label "巻二十二"@ja ;
+    hp:rangePosition 22 .
+
+<http://example.org/hanpoetry/resource/range/nihonsiki-vol22-SugawaraNoMichizane> a hp:Range ;
+    hp:isSubRangeOf <http://example.org/hanpoetry/resource/range/nihonsiki-vol22> ;
+    rdfs:label "菅原道真"@zh ;
+    rdfs:label "Sugawara no Michizane"@en ;
+    rdfs:label "菅原道真"@ja ;
+    hp:rangePosition 1 .
+
+<http://example.org/hanpoetry/resource/canvas/nihonsiki-vol22-SugawaraNoMichizane-yueyejianmeihua> a hp:Canvas ;
+    hp:representsPoem <http://example.org/hanpoetry/resource/poem/yueyejianmeihua> ;
+    hp:hasTEIFragment <http://localhost:8080/Heian_db/TEI/nihonsiki.xml#Nihonsikiquantangshi-Volume16-Poet1-Poem1> ;
+    hp:hasLanguage "zh" ;
+    rdfs:label "月夜见梅花"@zh ;
+    rdfs:label "Seeing Plum Blossoms on a Moonlit Night"@en ;
+    rdfs:label "月夜見梅花"@ja ;
+    hp:isContainedIn <http://example.org/hanpoetry/resource/range/nihonsiki-vol22-SugawaraNoMichizane> .
+
+<http://example.org/hanpoetry/resource/canvas/nihonsiki-vol22-SugawaraNoMichizane-qiuye> a hp:Canvas ;
+    hp:representsPoem <http://example.org/hanpoetry/resource/poem/qiuye> ;
+    hp:hasTEIFragment <http://localhost:8080/Heian_db/TEI/nihonsiki.xml#Nihonsikiquantangshi-Volume22-Poet1-Poem2> ;
+    hp:hasLanguage "zh" ;
+    rdfs:label "秋夜"@zh ;
+    rdfs:label "Autumn Night"@en ;
+    rdfs:label "秋夜"@ja ;
+    hp:isContainedIn <http://example.org/hanpoetry/resource/range/nihonsiki-vol22-SugawaraNoMichizane> .
+
+
+

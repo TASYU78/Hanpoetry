@@ -1,0 +1,251 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix hp:   <http://example.org/HanpoetryOWL#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bf:   <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+
+##################################################################
+# Collection: Quan Tang Shi 《全唐诗》
+##################################################################
+
+<http://example.org/hanpoetry/resource/collection/quantangshi> a hp:Collection ;
+    rdfs:label "全唐诗"@zh ;
+    rdfs:label "Complete Tang Poems"@en ;
+    rdfs:label "全唐詩"@ja ;
+    hp:hasCollectionConcept <http://example.org/hanpoetry/resource/concept/tangCollection> ;
+    hp:hasDescription "清代编纂的大型唐诗总集，收录唐代诗人近五万首作品。"@zh ;
+    hp:hasCreationTime "1705-01-01"^^xsd:date ;
+    hp:hasAuthor <http://example.org/hanpoetry/resource/person/jiputang> ;
+    hp:hasManifestation <http://example.org/hanpoetry/resource/manifestation/quantangshi> .
+
+<http://example.org/hanpoetry/resource/manifestation/quantangshi> a hp:Manifestation ;
+    hp:isManifestedIn <http://example.org/hanpoetry/resource/collection/quantangshi> ;
+    hp:hasManifestedTitle "全唐诗（中文原文）"@zh ;
+    hp:hasLanguage "zh" ;
+    hp:hasSequenceNumber 1 .
+
+##################################################################
+# Ranges for 《全唐诗》中文原文
+##################################################################
+
+<http://example.org/hanpoetry/resource/range/quantangshi-vol20> a hp:Range ;
+    hp:inManifestation <http://example.org/hanpoetry/resource/manifestation/quantangshi> ;
+    rdfs:label "卷二十"@zh ;
+    rdfs:label "Volume 20"@en ;
+    rdfs:label "巻二十"@ja ;
+    hp:rangePosition 20 .
+
+<http://example.org/hanpoetry/resource/range/quantangshi-vol117> a hp:Range ;
+    hp:inManifestation <http://example.org/hanpoetry/resource/manifestation/quantangshi> ;
+    rdfs:label "卷一百十七"@zh ;
+    rdfs:label "Volume 117"@en ;
+    rdfs:label "巻百十七"@ja ;
+    hp:rangePosition 117 .
+
+<http://example.org/hanpoetry/resource/range/quantangshi-vol182> a hp:Range ;
+    hp:inManifestation <http://example.org/hanpoetry/resource/manifestation/quantangshi> ;
+    rdfs:label "卷一百八十二"@zh ;
+    rdfs:label "Volume 182"@en ;
+    rdfs:label "巻百八十二"@ja ;
+    hp:rangePosition 182 .
+
+<http://example.org/hanpoetry/resource/range/quantangshi-vol230> a hp:Range ;
+    hp:inManifestation <http://example.org/hanpoetry/resource/manifestation/quantangshi> ;
+    rdfs:label "卷二百三十"@zh ;
+    rdfs:label "Volume 230"@en ;
+    rdfs:label "巻二百三十"@ja ;
+    hp:rangePosition 230 .
+
+<http://example.org/hanpoetry/resource/range/quantangshi-vol443> a hp:Range ;
+    hp:inManifestation <http://example.org/hanpoetry/resource/manifestation/quantangshi> ;
+    rdfs:label "卷四百四十三"@zh ;
+    rdfs:label "Volume 443"@en ;
+    rdfs:label "巻四百四十三"@ja ;
+    hp:rangePosition 443 .
+
+<http://example.org/hanpoetry/resource/range/quantangshi-vol448> a hp:Range ;
+    hp:inManifestation <http://example.org/hanpoetry/resource/manifestation/quantangshi> ;
+    rdfs:label "卷四百四十八"@zh ;
+    rdfs:label "Volume 448"@en ;
+    rdfs:label "巻四百四十八"@ja ;
+    hp:rangePosition 448 .
+
+##################################################################
+# Canvas under 卷二十: 蜀道难
+##################################################################
+
+<http://example.org/hanpoetry/resource/canvas/quantangshi-shudaonan> a hp:Canvas ;
+    hp:representsPoem <http://example.org/hanpoetry/resource/poem/shudaonan> ;
+    hp:hasTEIFragment <http://localhost:8080/Tang_db/tei/quantangshi.xml#vol20-shudaonan> ;
+    hp:hasLanguage "zh" ;
+    rdfs:label "蜀道难（全唐诗·卷二十）"@zh ;
+    rdfs:label "Shu Dao Nan (Complete Tang Poems Vol 20)"@en ;
+    hp:isContainedIn <http://example.org/hanpoetry/resource/range/quantangshi-vol20> .
+
+##################################################################
+# Canvas under 卷一百十七: 送储邑之武昌
+##################################################################
+
+<http://example.org/hanpoetry/resource/canvas/quantangshi-songchuyizhiwuchang> a hp:Canvas ;
+    hp:representsPoem <http://example.org/hanpoetry/resource/poem/songchuyizhiwuchang> ;
+    hp:hasTEIFragment <http://localhost:8080/Tang_db/tei/quantangshi.xml#vol117-songchuyi> ;
+    hp:hasLanguage "zh" ;
+    rdfs:label "送储邑之武昌（全唐诗·卷一百十七）"@zh ;
+    rdfs:label "Farewell to Chu Yi Going to Wuchang (Complete Tang Poems Vol 117)"@en ;
+    hp:isContainedIn <http://example.org/hanpoetry/resource/range/quantangshi-vol117> .
+
+##################################################################
+# Canvas under 卷一百八十二: 月下独酌
+##################################################################
+
+<http://example.org/hanpoetry/resource/canvas/quantangshi-yuexiaduzhuo> a hp:Canvas ;
+    hp:representsPoem <http://example.org/hanpoetry/resource/poem/yuexiaduzhuo> ;
+    hp:hasTEIFragment <http://localhost:8080/Tang_db/tei/quantangshi.xml#vol182-yuexiaduzhuo> ;
+    hp:hasLanguage "zh" ;
+    rdfs:label "月下独酌（全唐诗·卷一百八十二）"@zh ;
+    rdfs:label "Drinking Alone under the Moon (Complete Tang Poems Vol 182)"@en ;
+    hp:isContainedIn <http://example.org/hanpoetry/resource/range/quantangshi-vol182> .
+
+##################################################################
+# Canvas under 卷二百三十: 秋兴八首·其七
+##################################################################
+
+<http://example.org/hanpoetry/resource/canvas/quantangshi-qiuxing7> a hp:Canvas ;
+    hp:representsPoem <http://example.org/hanpoetry/resource/poem/qiuxing7> ;
+    hp:hasTEIFragment <http://localhost:8080/Tang_db/tei/quantangshi.xml#vol230-qiuxing7> ;
+    hp:hasLanguage "zh" ;
+    rdfs:label "秋兴八首·其七（全唐诗·卷二百三十）"@zh ;
+    rdfs:label "Autumn Meditations VIII No.7 (Complete Tang Poems Vol 230)"@en ;
+    hp:isContainedIn <http://example.org/hanpoetry/resource/range/quantangshi-vol230> .
+
+##################################################################
+# Canvas under 卷二百三十: 咏怀古迹·其三
+##################################################################
+
+<http://example.org/hanpoetry/resource/canvas/quantangshi-yonghuaiguji3> a hp:Canvas ;
+    hp:representsPoem <http://example.org/hanpoetry/resource/poem/yonghuaiguji3> ;
+    hp:hasTEIFragment <http://localhost:8080/Tang_db/tei/quantangshi.xml#vol230-yonghuai3> ;
+    hp:hasLanguage "zh" ;
+    rdfs:label "咏怀古迹·其三（全唐诗·卷二百三十）"@zh ;
+    rdfs:label "Meditation on the Past No.3 (Complete Tang Poems Vol 230)"@en ;
+    hp:isContainedIn <http://example.org/hanpoetry/resource/range/quantangshi-vol230> .
+
+##################################################################
+# Canvas under 卷四百四十三: 夜泊旅望
+##################################################################
+
+<http://example.org/hanpoetry/resource/canvas/quantangshi-yebolvwang> a hp:Canvas ;
+    hp:representsPoem <http://example.org/hanpoetry/resource/poem/yebolvwang> ;
+    hp:hasTEIFragment <http://localhost:8080/Tang_db/tei/quantangshi.xml#vol443-yebo> ;
+    hp:hasLanguage "zh" ;
+    rdfs:label "夜泊旅望（全唐诗·卷四百四十三）"@zh ;
+    rdfs:label "Night Mooring and Traveler's View (Complete Tang Poems Vol 443)"@en ;
+    hp:isContainedIn <http://example.org/hanpoetry/resource/range/quantangshi-vol443> .
+
+##################################################################
+# Canvas under 卷四百四十八: 闲咏
+##################################################################
+
+<http://example.org/hanpoetry/resource/canvas/quantangshi-xianyong> a hp:Canvas ;
+    hp:representsPoem <http://example.org/hanpoetry/resource/poem/xianyong> ;
+    hp:hasTEIFragment <http://localhost:8080/Tang_db/tei/quantangshi.xml#vol448-xianyong> ;
+    hp:hasLanguage "zh" ;
+    rdfs:label "闲咏（全唐诗·卷四百四十八）"@zh ;
+    rdfs:label "Idle Chant (Complete Tang Poems Vol 448)"@en ;
+    hp:isContainedIn <http://example.org/hanpoetry/resource/range/quantangshi-vol448> .
+
+##################################################################
+# Collection: Selected Chinese Poems Translated into English Verse 《英译唐诗精选》
+##################################################################
+
+<http://example.org/hanpoetry/resource/collection/yingyitangshi> a hp:Collection ;
+    rdfs:label "英译唐诗精选"@zh ;
+    rdfs:label "Selected Chinese Poems Translated into English Verse"@en ;
+    rdfs:label "唐詩英訳選集"@ja ;
+    hp:hasCollectionConcept <http://example.org/hanpoetry/resource/concept/tangCollection> ;
+    hp:hasDescription "W. J. B. Fletcher 所译唐诗选集，包含英译版本及部分注解。"@zh ;
+    hp:hasCreationTime "1919-01-01"^^xsd:date ;
+    hp:hasAuthor <http://example.org/hanpoetry/resource/person/fletcher> ;
+    hp:hasManifestation <http://example.org/hanpoetry/resource/manifestation/yingyitangshi-en> .
+
+<http://example.org/hanpoetry/resource/manifestation/yingyitangshi-en> a hp:Manifestation ;
+    hp:isManifestedIn <http://example.org/hanpoetry/resource/collection/yingyitangshi> ;
+    hp:hasManifestedTitle "Selected Chinese Poems (English Translation)"@en ;
+    hp:hasLanguage "en" ;
+    hp:hasSequenceNumber 1 .
+
+<http://example.org/hanpoetry/resource/range/yingyitangshi-libai> a hp:Range ;
+    hp:inManifestation <http://example.org/hanpoetry/resource/manifestation/yingyitangshi-en> ;
+    hp:rangeLabel "李白的诗"@zh ;
+    hp:rangeLabel "Poems by Li Bai"@en ;
+    hp:rangeLabel "李白の詩"@ja ;
+    hp:rangePosition 1 .
+
+<http://example.org/hanpoetry/resource/range/yingyitangshi-dufu> a hp:Range ;
+    hp:inManifestation <http://example.org/hanpoetry/resource/manifestation/yingyitangshi-en> ;
+    hp:rangeLabel "杜甫的诗"@zh ;
+    hp:rangeLabel "Poems by Du Fu"@en ;
+    hp:rangeLabel "杜甫の詩"@ja ;
+    hp:rangePosition 2 .
+
+##################################################################
+# Canvas:
+##################################################################
+
+
+<http://example.org/hanpoetry/resource/canvas/yingyitangshi-shudaonan> a hp:Canvas ;
+    hp:representsPoem <http://example.org/hanpoetry/resource/poem/shudaonan> ;
+    hp:hasTEIFragment <http://localhost:8080/Tang_db/tei/yingyitangshi.xml#shudaonan> ;
+    hp:hasLanguage "en" ;
+    rdfs:label "The Road to Shu is Hard (English Translation)"@en ;
+    rdfs:label "蜀道难（英译）"@zh ;
+    hp:isContainedIn <http://example.org/hanpoetry/resource/range/yingyitangshi-libai> .
+
+<http://example.org/hanpoetry/resource/canvas/yingyitangshi-songchuyizhiwuchang> a hp:Canvas ;
+    hp:representsPoem <http://example.org/hanpoetry/resource/poem/songchuyizhiwuchang> ;
+    hp:hasTEIFragment <http://localhost:8080/Tang_db/tei/yingyitangshi.xml#songchuyizhiwuchang> ;
+    hp:hasLanguage "en" ;
+    rdfs:label "Seeing Chu Yi Off to Wuchang (English Translation)"@en ;
+    rdfs:label "送储邑之武昌（英译）"@zh ;
+    hp:isContainedIn <http://example.org/hanpoetry/resource/range/yingyitangshi-libai> .
+
+<http://example.org/hanpoetry/resource/canvas/yingyitangshi-yuexiaduzhuo> a hp:Canvas ;
+    hp:representsPoem <http://example.org/hanpoetry/resource/poem/yuexiaduzhuo> ;
+    hp:hasTEIFragment <http://localhost:8080/Tang_db/tei/yingyitangshi.xml#yuexiaduzhuo> ;
+    hp:hasLanguage "en" ;
+    rdfs:label "Drinking Alone under the Moon (English Translation)"@en ;
+    rdfs:label "月下独酌（英译）"@zh ;
+    hp:isContainedIn <http://example.org/hanpoetry/resource/range/yingyitangshi-libai> .
+
+<http://example.org/hanpoetry/resource/canvas/yingyitangshi-guanshanyue> a hp:Canvas ;
+    hp:representsPoem <http://example.org/hanpoetry/resource/poem/guanshanyue> ;
+    hp:hasTEIFragment <http://localhost:8080/Tang_db/tei/yingyitangshi.xml#guanshanyue> ;
+    hp:hasLanguage "en" ;
+    rdfs:label "Moon Over the Mountain Pass (English Translation)"@en ;
+    rdfs:label "关山月（英译）"@zh ;
+    hp:isContainedIn <http://example.org/hanpoetry/resource/range/yingyitangshi-libai> .
+
+<http://example.org/hanpoetry/resource/canvas/yingyitangshi-qiuxing7> a hp:Canvas ;
+    hp:representsPoem <http://example.org/hanpoetry/resource/poem/qiuxing7> ;
+    hp:hasTEIFragment <http://localhost:8080/Tang_db/tei/yingyitangshi.xml#qiuxing7> ;
+    hp:hasLanguage "en" ;
+    rdfs:label "Autumn Meditations VIII No.7 (English Translation)"@en ;
+    rdfs:label "秋兴八首·其七（英译）"@zh ;
+    hp:isContainedIn <http://example.org/hanpoetry/resource/range/yingyitangshi-dufu> .
+
+<http://example.org/hanpoetry/resource/canvas/yingyitangshi-yonghuai3> a hp:Canvas ;
+    hp:representsPoem <http://example.org/hanpoetry/resource/poem/yonghuai3> ;
+    hp:hasTEIFragment <http://localhost:8080/Tang_db/tei/yingyitangshi.xml#yonghuai3> ;
+    hp:hasLanguage "en" ;
+    rdfs:label "Reflections on the Past III (English Translation)"@en ;
+    rdfs:label "咏怀古迹·其三（英译）"@zh ;
+    hp:isContainedIn <http://example.org/hanpoetry/resource/range/yingyitangshi-dufu> .
+
+
