@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="quantangshi">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>全唐诗 TEI 编码</title>
+        <title>Complete Tang Poems (TEI Encoding)</title>
+        <editor>XMQ</editor>
+      </titleStmt>
+      <publicationStmt>
+        <p>本 TEI 文档由用户基于 RDF/OWL 本体结构构建，收录《全唐诗》中的汉诗。</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>数据来源：《全唐诗》，清·彭定求等编</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+
+  <text>
+    <body>
+      <div type="卷" xml:id="quantangshi-Volume18" n="18">
+        <div type="poem" xml:id="guanshanyue" n="1">
+          <head>关山月</head>
+          <lg n="1">
+            <l n="1">黄鹤西楼月</l>
+            <l n="2">长江万里情</l>
+          </lg>
+          <lg n="2">
+            <l n="3">春风三十度</l>
+            <l n="4">空忆武昌城</l>
+          </lg>
+          <lg n="3">
+            <l n="5">送尔难为别</l>
+            <l n="6">衔杯惜未倾</l>
+          </lg>
+          <lg n="4">
+            <l n="7">湖连张乐地</l>
+            <l n="8">山逐泛舟行</l>
+          </lg>
+          <lg n="5">
+            <l n="9">诺为楚人重</l>
+            <l n="10">诗传谢脁清</l>
+          </lg>
+          <lg n="6">
+            <l n="11">沧浪吾有曲</l>
+            <l n="12">寄入棹歌声</l>
+          </lg>
+        </div>
+      </div>
+
+      <div type="卷" xml:id="quantangshi-Volume20" n="20">
+        <div type="poem" xml:id="shudaonan" n="1">
+          <head>蜀道难</head>
+            <lg  n="1">
+              <l n="1">噫吁嚱，</l>
+              <l n="2">危乎高哉！</l>
+              <l n="3">蜀道之难，</l>
+              <l n="4">难于上青天！</l>
+            </lg>
+        
+            <lg  n="2">
+              <l n="5">蚕丛及鱼凫，</l>
+              <l n="6">开国何茫然！</l>
+            </lg>
+        
+            <lg  n="3">
+              <l n="7">尔来四万八千岁，</l>
+              <l n="8">不与秦塞通人烟。</l>
+            </lg>
+        
+            <lg  n="4">
+              <l n="9">西当太白有鸟道，</l>
+              <l n="10">可以横绝峨眉巅。</l>
+            </lg>
+        
+            <lg  n="5">
+              <l n="11">地崩山摧壮士死，</l>
+              <l n="12">然后天梯石栈相钩连。</l>
+            </lg>
+        
+            <lg  n="6">
+              <l n="13">上有六龙回日之高标，</l>
+              <l n="14">下有冲波逆折之回川。</l>
+            </lg>
+        
+            <lg  n="7">
+              <l n="15">黄鹤之飞尚不得过，</l>
+              <l n="16">猿猱欲度愁攀援。</l>
+            </lg>
+        
+            <lg  n="8">
+              <l n="17">青泥何盘盘，</l>
+              <l n="18">百步九折萦岩峦。</l>
+            </lg>
+        
+            <lg  n="9">
+              <l n="19">扪参历井仰胁息，</l>
+              <l n="20">以手抚膺坐长叹。</l>
+            </lg>
+        
+            <lg  n="10">
+              <l n="21">问君西游何时还？</l>
+              <l n="22">畏途巉岩不可攀。</l>
+            </lg>
+        
+            <lg  n="11">
+              <l n="23">但见悲鸟号古木，</l>
+              <l n="24">雄飞雌从绕林间。</l>
+            </lg>
+        
+            <lg  n="12">
+              <l n="25">又闻子规啼夜月，</l>
+              <l n="26">愁空山。</l>
+            </lg>
+        
+            <lg  n="13">
+              <l n="27">蜀道之难，</l>
+              <l n="28">难于上青天，</l>
+              <l n="29">使人听此凋朱颜！</l>
+            </lg>
+        
+            <lg  n="14">
+              <l n="30">连峰去天不盈尺，</l>
+              <l n="31">枯松倒挂倚绝壁。</l>
+            </lg>
+        
+            <lg  n="15">
+              <l n="32">飞湍 瀑流争喧豗，</l>
+              <l n="33">砯崖转石万壑雷。</l>
+            </lg>
+        
+            <lg  n="16">
+              <l n="34">其险也如此，</l>
+              <l n="35">嗟尔远道之人胡为乎来哉！</l>
+            </lg>
+        
+            <lg  n="17">
+              <l n="36">剑阁峥嵘而崔嵬，</l>
+              <l n="37">一夫当关，</l>
+              <l n="38">万夫莫开。</l>
+            </lg>
+        
+            <lg  n="18">
+              <l n="39">所守或匪亲，</l>
+              <l n="40">化为狼与豺。</l>
+            </lg>
+        
+            <lg  n="19">
+              <l n="41">朝避猛虎，</l>
+              <l n="42">夕避长蛇，</l>
+              <l n="43">磨牙吮血，</l>
+              <l n="44">杀人如麻。</l>
+            </lg>
+        
+            <lg  n="20">
+              <l n="45">锦城虽云乐，</l>
+              <l n="46">不如早还家。</l>
+            </lg>
+            <lg  n="21">
+              <l n="46">蜀道之难，</l>
+              <l n="47">难于上青天，</l>
+              <l n="47">侧身西望长咨嗟！</l>
+            </lg>
+        </div>
+      </div>
+
+      <div type="卷" xml:id="quantangshi-Volume177" n="177">
+        <div type="poem" xml:id="songchuyizhiwuchang" n="1">
+          <head>送储邑之武昌</head>
+          <lg n="1">
+            <l n="1">黄鹤西楼月</l>
+            <l n="2">长江万里情</l>
+          </lg>
+          <lg n="2">
+            <l n="3">春风三十度</l>
+            <l n="4">空忆武昌城</l>
+          </lg>
+          <lg n="3">
+            <l n="5">送尔难为别</l>
+            <l n="6">衔杯惜未倾</l>
+          </lg>
+          <lg n="4">
+            <l n="7">湖连张乐地</l>
+            <l n="8">山逐泛舟行</l>
+          </lg>
+          <lg n="5">
+            <l n="9">诺为楚人重</l>
+            <l n="10">诗传谢脁清</l>
+          </lg>
+          <lg n="6">
+            <l n="11">沧浪吾有曲</l>
+            <l n="12">寄入棹歌声</l>
+          </lg>
+        </div>
+      </div>
+      
+      <div type="卷" xml:id="quantangshi-Volume182" n="182">
+        <div type="poem" xml:id="yuexiaduzhuo" n="1">
+          <head>月下独酌（其一）</head>
+          <lg n="1">
+            <l n="1">花间一壶酒</l>
+            <l n="2">独酌无相亲</l>
+          </lg>
+          <lg n="2">
+            <l n="3">举杯邀明月</l>
+            <l n="4">对影成三人</l>
+          </lg>
+          <lg n="3">
+            <l n="5">月既不解饮</l>
+            <l n="6">影徒随我身</l>
+          </lg>
+          <lg n="4">
+            <l n="7">暂伴月将影</l>
+            <l n="8">行乐须及春</l>
+          </lg>
+          <lg n="5">
+            <l n="9">我歌月徘徊</l>
+            <l n="10">我舞影零乱</l>
+          </lg>
+          <lg n="6">
+            <l n="11">醒时同交欢</l>
+            <l n="12">醉后各分散</l>
+          </lg>
+          <lg n="7">
+            <l n="13">永结无情游</l>
+            <l n="14">相期邈云汉</l>
+          </lg>
+        </div>
+      </div>
+      
+      
+      <div type="卷" xml:id="quantangshi-Volume230" n="230">
+        <div type="poem" xml:id="qiuxing7" n="1">
+          <head>秋兴八首·其七</head>
+          <lg n="1">
+            <l n="1">昆明池水汉时功</l>
+            <l n="2">武帝旌旗在眼中</l>
+          </lg>
+          <lg n="2">
+            <l n="3">织女机丝虚夜月</l>
+            <l n="4">石鲸鳞甲动秋风</l>
+          </lg>
+          <lg n="3">
+            <l n="5">波漂菰米沉云黑</l>
+            <l n="6">露冷莲房坠粉红</l>
+          </lg>
+          <lg n="4">
+            <l n="7">关塞极天惟鸟道</l>
+            <l n="8">江湖满地一渔翁</l>
+          </lg>
+        </div>
+
+        <div type="poem" xml:id="yonghuaiguji3" n="2">
+          <head>咏怀古迹五首·其三</head>
+          <lg n="1">
+            <l n="1">群山万壑赴荆门</l>
+            <l n="2">生长明妃尚有村</l>
+          </lg>
+          <lg n="2">
+            <l n="3">一去紫台连朔漠</l>
+            <l n="4">独留青冢向黄昏</l>
+          </lg>
+          <lg n="3">
+            <l n="5">画图省识春风面</l>
+            <l n="6">环珮空归夜月魂</l>
+          </lg>
+          <lg n="4">
+            <l n="7">千载琵琶作胡语</l>
+            <l n="8">分明怨恨曲中论</l>
+          </lg>
+        </div>
+      </div>
+      
+      <div type="卷" xml:id="quantangshi-Volume448" n="448">
+        
+        <div type="poem" xml:id="xianyong" n="1">
+          <head>闲咏</head>
+          <lg n="1">
+            <l n="1">步月怜清景</l>
+            <l n="2">眠松爱绿阴</l>
+          </lg>
+          <lg n="2">
+            <l n="3">早年诗思苦</l>
+            <l n="4">晚岁道情深</l>
+          </lg>
+          <lg n="3">
+            <l n="5">夜学禅多坐</l>
+            <l n="6">秋牵兴暂吟</l>
+          </lg>
+          <lg n="4">
+            <l n="7">悠然两事外</l>
+            <l n="8">无处更留心</l>
+          </lg>
+        </div>
+      </div>
+      
+      <div type="卷" xml:id="quantangshi-Volume443" n="443">
+
+        <div type="poem" xml:id="yebolvwang" n="1">
+          <head>夜泊旅望</head>
+          <lg n="1">
+            <l n="1">少睡多愁客</l>
+            <l n="2">中宵起望乡</l>
+          </lg>
+          <lg n="2">
+            <l n="3">沙明连浦月</l>
+            <l n="4">帆白满船霜</l>
+          </lg>
+          <lg n="3">
+            <l n="5">近海江弥阔</l>
+            <l n="6">迎秋夜更长</l>
+          </lg>
+          <lg n="4">
+            <l n="7">烟波三十宿</l>
+            <l n="8">犹未到钱唐</l>
+          </lg>
+        </div>
+      </div>          
+    </body>
+  </text>
+</TEI>

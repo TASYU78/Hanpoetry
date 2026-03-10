@@ -1,0 +1,133 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix hp:  <https://w3id.org/hanpoetry/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bf:   <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+##################################################################
+# 李白的诗 poems of Li Bai
+##################################################################
+
+<https://w3id.org/hanpoetry/resource/tang/poem/shudaonan> a hp:Poem ;
+    bf:title "蜀道难"@zh ;
+    bf:title "The Road to Shu is Hard"@en ;
+    bf:title "蜀道難"@ja ;
+    hp:hasAuthor <https://w3id.org/hanpoetry/resource/tang/person/LiBai> ;
+    dct:created "8th century"@en ;
+    rdfs:comment "李白代表作之一，以惊险壮阔描绘蜀地山川。"@zh ;
+    hp:hasKnowledge 
+        <https://w3id.org/hanpoetry/resource/tang/knowledge/ImageryMoon> ,
+        <https://w3id.org/hanpoetry/resource/tang/knowledge/ImageryShuRoad> ,
+        <https://w3id.org/hanpoetry/resource/tang/knowledge/CelestialThreeStars> ,
+        <https://w3id.org/hanpoetry/resource/tang/knowledge/CelestialWellMansion> ,
+        <https://w3id.org/hanpoetry/resource/tang/knowledge/ImageryWaterfall> ,
+        <https://w3id.org/hanpoetry/resource/tang/knowledge/ImageryBird> ,
+        <https://w3id.org/hanpoetry/resource/tang/knowledge/HistoricalCancCong> ,
+        <https://w3id.org/hanpoetry/resource/tang/knowledge/HistoricalYuFu> ,
+        <https://w3id.org/hanpoetry/resource/tang/knowledge/ImageryMountTaibai> ,
+        <https://w3id.org/hanpoetry/resource/tang/knowledge/ImageryMountEmei> ,
+        <https://w3id.org/hanpoetry/resource/tang/knowledge/Exclamation>,
+        <https://w3id.org/hanpoetry/resource/tang/knowledge/ThemeLandscapeNature> ;
+    hp:isRepresentedIn <https://w3id.org/hanpoetry/resource/tang/canvas/yingyitangshi-shudaonan>,
+                       <https://w3id.org/hanpoetry/resource/tang/canvas/quantangshi-shudaonan> .
+
+
+
+
+
+<https://w3id.org/hanpoetry/resource/tang/poem/songchuyizhiwuchang> a  hp:Poem ;
+    bf:title "送储邑之武昌"@zh ;
+    bf:title "TO WUCHANG"@en ;
+    bf:title "送储邑之武昌"@ja ;
+    hp:hasAuthor <https://w3id.org/hanpoetry/resource/tang/person/LiBai> ;
+    hp:hasKnowledge <https://w3id.org/hanpoetry/resource/tang/knowledge/ImageryMoon> ,
+                    <https://w3id.org/hanpoetry/resource/tang/knowledge/ThemeFarewell> ;
+    hp:isRepresentedIn <https://w3id.org/hanpoetry/resource/tang/canvas/yingyitangshi-songchuyizhiwuchang>,
+                       <https://w3id.org/hanpoetry/resource/tang/canvas/quantangshi-songchuyizhiwuchang> .
+
+
+<https://w3id.org/hanpoetry/resource/tang/poem/yuexiaduzhuo> a  hp:Poem ;
+    bf:title "月下独酌"@zh ;
+    bf:title "WE THREE"@en ;
+    bf:title "月下独酌"@ja ;
+    hp:hasAuthor <https://w3id.org/hanpoetry/resource/tang/person/LiBai> ;
+    hp:hasKnowledge <https://w3id.org/hanpoetry/resource/tang/knowledge/ImageryMoon> ,
+                    <https://w3id.org/hanpoetry/resource/tang/knowledge/ThemeSentimentLyric>;
+    hp:isRepresentedIn <https://w3id.org/hanpoetry/resource/tang/canvas/yingyitangshi-yuexiaduzhuo>,
+                       <https://w3id.org/hanpoetry/resource/tang/canvas/quantangshi-yuexiaduzhuo> .
+
+
+<https://w3id.org/hanpoetry/resource/tang/poem/guanshanyue> a  hp:Poem ;
+    bf:title "关山月"@zh ;
+    bf:title "THE MOON OVER THE PASS"@en ;
+    bf:title "関山月"@ja ;
+    hp:hasAuthor <https://w3id.org/hanpoetry/resource/tang/person/LiBai> ;
+    hp:hasKnowledge <https://w3id.org/hanpoetry/resource/tang/knowledge/ImageryMoon> ,
+                    <https://w3id.org/hanpoetry/resource/tang/knowledge/ThemeBorderCampaign> ;
+    hp:isRepresentedIn <https://w3id.org/hanpoetry/resource/tang/canvas/yingyitangshi-guanshanyue>,
+                       <https://w3id.org/hanpoetry/resource/tang/canvas/quantangshi-guanshanyue> .
+
+
+##################################################################
+# 杜甫的诗 Poem of Du Fu
+##################################################################
+
+<https://w3id.org/hanpoetry/resource/tang/poem/qiuxing7> a  hp:Poem ;
+    bf:title "秋兴八首·其七"@zh ;
+    bf:title "ODES TO AUTUMN No. 7"@en ;
+    bf:title "秋興八首（その七）"@ja ;
+    hp:hasAuthor <https://w3id.org/hanpoetry/resource/tang/person/DuFu> ;
+    hp:hasKnowledge <https://w3id.org/hanpoetry/resource/tang/knowledge/ImageryMoon> ,
+                    <https://w3id.org/hanpoetry/resource/tang/knowledge/ThemeNostalgiaAntiquity>;
+    hp:isRepresentedIn <https://w3id.org/hanpoetry/resource/tang/canvas/yingyitangshi-qiuxing7>,
+                       <https://w3id.org/hanpoetry/resource/tang/canvas/quantangshi-qiuxing7> .
+
+
+
+
+<https://w3id.org/hanpoetry/resource/tang/poem/yonghuaiguji3> a  hp:Poem ;
+    bf:title "咏怀古迹·其三"@zh ;
+    bf:title "AN ANCIENT STORY"@en ;
+    bf:title "古跡を詠ず（その三）"@ja ;
+    hp:hasAuthor <https://w3id.org/hanpoetry/resource/tang/person/DuFu> ;
+    hp:hasKnowledge <https://w3id.org/hanpoetry/resource/tang/knowledge/ImageryMoon> ,
+                    <https://w3id.org/hanpoetry/resource/tang/knowledge/ThemeNostalgiaAntiquity> ;
+    hp:isRepresentedIn <https://w3id.org/hanpoetry/resource/tang/canvas/yingyitangshi-yonghuaiguji3>,
+                       <https://w3id.org/hanpoetry/resource/tang/canvas/quantangshi-yonghuaiguji3> .
+
+
+
+##################################################################
+# 白居易的诗 Poem of Bai Juyi
+##################################################################
+
+<https://w3id.org/hanpoetry/resource/tang/poem/xianyong> a  hp:Poem ;
+    bf:title "闲咏"@zh ;
+    bf:title "Idle Chant"@en ;
+    bf:title "閑吟"@ja ;
+    hp:hasAuthor <https://w3id.org/hanpoetry/resource/tang/person/BaiJuyi> ;
+    hp:hasKnowledge <https://w3id.org/hanpoetry/resource/tang/knowledge/ImageryMoon> ,
+                    <https://w3id.org/hanpoetry/resource/tang/knowledge/ThemeSentimentLyric> ;
+    hp:isRepresentedIn <https://w3id.org/hanpoetry/resource/tang/canvas/quantangshi-xianyong> .
+
+
+
+<https://w3id.org/hanpoetry/resource/tang/poem/yebolvwang> a  hp:Poem ;
+    bf:title "夜泊旅望"@zh ;
+    bf:title "Night Mooring and Traveler's View"@en ;
+    bf:title "夜泊して旅を望む"@ja ;
+    hp:hasAuthor <https://w3id.org/hanpoetry/resource/tang/person/BaiJuyi> ;
+    hp:hasKnowledge <https://w3id.org/hanpoetry/resource/tang/knowledge/ImageryMoon> ,
+                    <https://w3id.org/hanpoetry/resource/tang/knowledge/WeatherFrost> ,
+                    <https://w3id.org/hanpoetry/resource/tang/knowledge/ColorWhite> ,
+                    <https://w3id.org/hanpoetry/resource/tang/knowledge/SeasonAutumn> ,
+                    <https://w3id.org/hanpoetry/resource/tang/knowledge/EmotionLoneliness> ,
+                    <https://w3id.org/hanpoetry/resource/tang/knowledge/EmotionFrustration> ,
+                    <https://w3id.org/hanpoetry/resource/tang/knowledge/EmotionWorry> ,
+                    <https://w3id.org/hanpoetry/resource/tang/knowledge/ThemeHomesickness> ;
+    hp:isRepresentedIn <https://w3id.org/hanpoetry/resource/tang/canvas/quantangshi-yebolvwang> .
